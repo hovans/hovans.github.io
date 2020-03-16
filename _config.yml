@@ -107,6 +107,11 @@ jsonContent:
       categories: false
       tags: true
 
+
+lazyload:
+  enable: true 
+  onlypost: false
+
 backup:
   type: git
   theme: next

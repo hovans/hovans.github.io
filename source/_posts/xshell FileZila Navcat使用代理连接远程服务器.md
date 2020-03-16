@@ -4,7 +4,7 @@ title: xshell、FileZila、Navcat使用代理连接国外服务器
 tags: 代理
 ---
 
-国外服务器被墙了，通过代理连接
+国外服务器被墙了，通过代理连接，代理推荐：http://dwz.date/wdx
 
 <!--more--> 
 ### 一.xshell连接服务器

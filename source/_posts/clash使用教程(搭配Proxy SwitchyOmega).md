@@ -7,7 +7,7 @@ tags: 翻墙
 clash默认不支持ssr,clashR才支持，需要替换calsh的内核
 Clash各版本(win,mac,linux)使用教程，增加规则,搭配Proxy SwitchyOmega,备份以免忘记
 
-自用稳定高速机场推荐：http://bit.ly/32wTSW3
+自用稳定高速机场推荐：http://dwz.date/wdx
 
 [机场订阅转换](https://web.api.ytoo-163cdn.com/) ：包含：SS(R)/v2ray转clash(R)
 
