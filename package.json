@@ -33,6 +33,6 @@
     "hexo-server": "^0.2.0"
   },
   "scripts": {
-    "pub": "hexo cl && hexo g && gulp && hexo d"
+    "pub": "hexo cl && hexo g && gulp && hexo d  && hexo b"
   }
 }
