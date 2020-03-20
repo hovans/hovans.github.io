@@ -29,8 +29,10 @@ jsdelivr也是cdn加速商。我博客用的next主题内置了。直接去[next
 
 
 ## 二、[博客](http://dwz.date/wdx)打开速度对比
-#### 下午:
 
+
+
+#### 下午:
 左边原github page，右边zeit
 <div align=center>![avatar](/uploads/cdn/1.png)
 
@@ -44,6 +46,15 @@ netlify
 netlify
 <div align=center>![avatar](/uploads/cdn/4.png)
 
+#### 早上：
+
+原cloudflare
+<div align=center>![avatar](/uploads/cdn/8.png)
+
+左边cloudflare+jsdelivr，右边zeit+jsdelivr
+
+<div align=center>![avatar](/uploads/cdn/7.png)
+
 另一个测速网站打开速度对比
 zeit搭配jsdelivr：
 <div align=center>![avatar](/uploads/cdn/6.png)
@@ -51,6 +62,8 @@ zeit搭配jsdelivr：
 cloudflare：
 <div align=center>![avatar](/uploads/cdn/5.png)
 
+本地F12,联通打开速度对比：netlify 1.6s; zeit:1.8s;CF：2.25s
 
-总结：zeit搭配jsdelivr速度最好，同时可以让百度收录，但是流量不多，适合我们这类小博客；
-netlify与cloudflare速度一般，但是也够用。流量多。
+
+总结：总体zeit搭配jsdelivr速度最好，同时可以让百度收录，但是流量不多，适合我们这类小博客；
+netlify站长之家速度不咋地，但是我这网络打开可以。与cloudflare速度一般，但是也够用。流量多。
