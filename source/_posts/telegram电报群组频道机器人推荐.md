@@ -10,48 +10,6 @@ telegram电报群三大主题:开车，政治，机场
 <!--more--> 
 
 
-### 科学上网相关：
-
-[ss，ssr，v2ray机场分享](https://t.me/askahh):白嫖机场分享群
-
-[小机场聚集地](https://t.me/minissr)
-
-[Fndroid的日常](https://t.me/fndroid_news) :clash for windows 官方
-
-[Clash for Android Channel](https://t.me/clash_for_android_channel)：安卓版本clash
-
-
-[安全上网，注意事项](https://t.me/anquanshangwang)
-
-机场测速：
-
-[科学上网资源整合](https://t.me/ysl_channel)
-
-[V1 Blog 科技 | 生活 | SSRSpeed | 主机评测](https://t.me/V1_BLOG)
-
-[毒药机场测速 SS/SSR](https://t.me/DuyaoSS)
-
-[BGP线路测试频道](https://t.me/BGP2020)
-
-[自用机场测速](https://t.me/shangguanhongxin) 
-
-[云测速](https://t.me/cloudtest)
-
-[喵帕斯花卷科技節點測速](https://t.me/mpsspeed)
-
-[机场优惠通知](https://t.me/discount_share)
-
-
-
-[ACL4SSR](https://t.me/ACL4SSR) 分流规则
-
-Quantumult X等相关：
-
-[Quantumult X News](https://t.me/QuanXNews): Quantumult X 相关
-
-[QuantumultX & Surge脚本收集](https://t.me/NobyDa): NobyDa大佬的脚本
-
-[Quantumult X JS 收集分享](https://t.me/QuanXJS)
 
 
 ###  合租群卖货等：
@@ -91,6 +49,8 @@ Quantumult X等相关：
 
 ### 开车群：
 
+[白丝控](https://t.me/aibaisi)：白丝收集
+
 [Forword | 收集器](https://t.me/botmzt)；妹子图收集备份
 
 [春潮频道 🅥 limboPro.xyz](https://t.me/limboprogarden):妹子视频
@@ -118,14 +78,54 @@ Quantumult X等相关：
 [汤不热精选](https://t.me/tumblrAce)
 [91国产自拍精选](https://t.me/ppp91)
 
-[桃 色 园 社 区](https://t.me/bbcc009)
-[全网鉴黄中心](https://t.me/jianhuang66)
-[绿帽淫妻群](https://t.me/lvmao123)
-[食色性也](https://t.me/livewithsex)
-
 
 修车：
 [中国资深老司机群组001](https://t.me/cnxiaolaba001) :小喇叭
+
+### 科学上网相关：
+
+[ss，ssr，v2ray机场分享](https://t.me/askahh):白嫖机场分享群
+
+[小机场聚集地](https://t.me/minissr)
+
+[Fndroid的日常](https://t.me/fndroid_news) :clash for windows 官方
+
+[Clash for Android Channel](https://t.me/clash_for_android_channel)：安卓版本clash
+
+
+[安全上网，注意事项](https://t.me/anquanshangwang)
+
+机场测速：
+
+[科学上网资源整合](https://t.me/ysl_channel)
+
+[V1 Blog 科技 | 生活 | SSRSpeed | 主机评测](https://t.me/V1_BLOG)
+
+[毒药机场测速 SS/SSR](https://t.me/DuyaoSS)
+
+[BGP线路测试频道](https://t.me/BGP2020)
+
+[自用机场测速](https://t.me/shangguanhongxin) 
+
+[云测速](https://t.me/cloudtest)
+
+[喵帕斯花卷科技節點測速](https://t.me/mpsspeed)
+
+[移动千兆测速](https://t.me/jcfast)
+
+[机场优惠通知](https://t.me/discount_share)
+
+
+[ACL4SSR](https://t.me/ACL4SSR) 分流规则
+
+Quantumult X等相关：
+
+[Quantumult X News](https://t.me/QuanXNews): Quantumult X 相关
+
+[QuantumultX & Surge脚本收集](https://t.me/NobyDa): NobyDa大佬的脚本
+
+[Quantumult X JS 收集分享](https://t.me/QuanXJS)
+
 
 ###  其它
 [DLK搞笑趣闻情报站](https://t.me/dlkqingbaozhan)：搞笑

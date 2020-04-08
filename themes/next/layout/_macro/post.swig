@@ -41,6 +41,11 @@
         </{%- if theme.seo %}h2{% else %}h1{%- endif %}>
 
         <div class="post-meta">
+        {% if post.top %}
+            <i class="fa fa-thumb-tack"></i>
+            <font color=7D26CD>置顶</font>
+            <span class="post-meta-divider">|</span>
+          {% endif %}
 
           {%- set date_diff = date(post.date) != date(post.updated) %}
           {%- set time_diff = time(post.date) != time(post.updated) %}

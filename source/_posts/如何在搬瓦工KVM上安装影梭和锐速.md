@@ -4,7 +4,8 @@ tags: 翻墙
 ---
 
 目前不建议自己搭建了，自用机场推荐：http://dwz.date/wdx
-
+搬瓦工购买:https://bandwagonhost.com/aff.php?aff=34663
+vultr：https://www.vultr.com/?ref=7277683
 
 <!--more--> 
 偶尔需要重装搬瓦工的vps,搭建ss,部分指令备份；

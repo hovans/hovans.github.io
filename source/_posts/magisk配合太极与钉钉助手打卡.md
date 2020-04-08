@@ -37,7 +37,7 @@ IOS苹果手机:
 ## 1.如果手机有分身功能，主空间安装fake location模拟定位，分身系统空间安装钉钉
 
 fake location安装包：
-[https://fir.im/fakelocation](https://fir.im/fakelocation)
+[fakelocation](https://github.com/Lerist/FakeLocation/releases)
 主空键安装后直接后直接搜索要模拟的位置模拟，免root运行需要去开发者模式—>选择模拟位置信息应用->选择fake location
 然后去分身系统安装钉钉
 
