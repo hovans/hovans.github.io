@@ -1,5 +1,5 @@
 ---
-title: Clash/ClashR各版本(windows,mac,linux,安卓)使用教程(搭配Proxy SwitchyOmega)
+title: Clash/ClashR各版本(windows,mac,linux,安卓,ios)使用教程(搭配Proxy SwitchyOmega)
 
 tags: 翻墙
 ---
@@ -119,6 +119,12 @@ mac安装文件：
 
 [安装方法参考](https://www.jianshu.com/p/2906066d2e0a)
 
+
+## IOS版本：
+一般iOS大家推荐 shadowrocket,Quantumult(X)，kitsunebi这些，但是quantumultX的健康检测自动选择节点功能总觉得不方便，近期小水滴：Pharos pro 支持导入clash了，导入本地yaml文件或者远程yaml文件下载。
+官方telegram群：https://t.me/Pharos_x_Announcements
+
+导入视频参考：https://t.me/ysl_channel/718
 
 # SwitchyOmega浏览器插件（可选）
 如果设置为系统代理则会全部都通过clash 分发。如果不想设置为系统代理则可以搭配
