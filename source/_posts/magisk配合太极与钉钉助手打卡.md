@@ -51,6 +51,9 @@ https://www.bilibili.com/read/cv4628284
 
 https://www.jianshu.com/p/79b7685b6075
 
+或者tasker+ autoinput；Rulebot等自动化操作软件
+
+
 ## 1.如果手机有分身功能，主空间安装fake location模拟定位，分身系统空间安装钉钉
 
 fake location安装包：
