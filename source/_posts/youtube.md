@@ -147,7 +147,6 @@ leecode视频
 鬼畜：
 
 [梅川伊芙](https://www.youtube.com/channel/UCHrkvfuollkwjgGWAga8LLA)
-[乳透社·小反旗](https://www.youtube.com/channel/UCr9pkYrfp6QumE11R9A9gqQ)
 
 ### 7.其它
 [163 braces](https://www.youtube.com/channel/UCnmeiFVqv64lAmVaw2PUm7w) ：唱个好好听的妹纸；
