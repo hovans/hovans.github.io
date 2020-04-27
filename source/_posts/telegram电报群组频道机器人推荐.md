@@ -5,7 +5,7 @@ tags: telegram
 
 telegram电报群三大主题:开车，政治，机场
 
-自用稳定高速机场推荐：http://dwz.date/wdx
+自用稳定高速机场推荐：https://hongwan.xyz/2019/08/30/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E6%96%B9%E6%B3%95%E6%B1%87%E6%80%BB(%E5%85%8D%E8%B4%B9%E4%B8%8E%E4%BB%98%E8%B4%B9)/#more
 
 <!--more--> 
 
@@ -39,17 +39,32 @@ telegram电报群三大主题:开车，政治，机场
 
 [如有乐享](https://t.me/ruyoblog)
 
+[免费资源](https://t.me/freeresource)
+
 [赚客吧 有奖一起赚](https://t.me/zuanke8)
 
-资源收集：
 
-[TG规则脚本信息分享器](https://t.me/MRHXPJGG):
+科技/资源收集：
+
+[TG规则脚本信息分享器](https://t.me/MRHXPJGG)
+
 [Zapro Notice](https://t.me/zaproshare)
+
 [Newlearnerの自留地](https://t.me/NewlearnerChannel)
+
+[TGgeek | TG极客 🆃🅶🅶🅴🅴🅺 | Telegram Geek](https://t.me/TGgeek)
+
+[科技爱好者周刊](https://t.me/scitech_fans)
+
+[TestFlight 科技花](https://t.me/TestFlightCN)
+
 
 ### 开车群：
 
 [白丝控](https://t.me/aibaisi)：白丝收集
+
+[黑丝控](https://t.me/aiheisi)：黑丝收集
+
 
 [Forword | 收集器](https://t.me/botmzt)；妹子图收集备份
 
@@ -64,6 +79,8 @@ telegram电报群三大主题:开车，政治，机场
 [不绝对领域](https://t.me/njdlingyu)
 
 [小瑜的老婆们](https://t.me/goumingdexiaojiejie)
+
+[联邦驾校小喇叭](https://t.me/LBJXXLB)
 
 18禁：
 注意身体
@@ -111,10 +128,11 @@ telegram电报群三大主题:开车，政治，机场
 
 [喵帕斯花卷科技節點測速](https://t.me/mpsspeed)
 
-[移动千兆测速](https://t.me/jcfast)
+[精致三网测速](https://t.me/jcfast)
 
 [机场优惠通知](https://t.me/discount_share)
 
+[鸡速集合](https://t.me/ssjcce)
 
 [ACL4SSR](https://t.me/ACL4SSR) 分流规则
 
@@ -127,7 +145,11 @@ Quantumult X等相关：
 [Quantumult X JS 收集分享](https://t.me/QuanXJS)
 
 
+
+
 ###  其它
+
+
 [DLK搞笑趣闻情报站](https://t.me/dlkqingbaozhan)：搞笑
 
 [🔞奇闻异录 与 沙雕时刻](https://t.me/wtmsd) :[NSFW] 一些神™沙雕的奇闻异录
@@ -144,5 +166,7 @@ Quantumult X等相关：
 
 ### 导航：
 [中文頻道群組搜索機器人](https://t.me/hao1234bot)
+
 政治：
 [导航：社会政治话题电报&群频道](https://t.me/shehuizhengzhi) 
+特别注明，外网很多消息是小道消息，真实性存疑，注意甄别。
