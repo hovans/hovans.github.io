@@ -75,7 +75,7 @@ mac安装文件：
 
 2)[clashXR](https://github.com/WhoJave/clashX/releases) :支持SSR
 
-#### 订阅链接和配置文件二选一！
+## 订阅链接和配置文件二选一！
 
 首先都要：把出站模式改为【规则判断】
 <div align=center>![avatar](/uploads/clash/21.png)
@@ -122,9 +122,18 @@ mac安装文件：
 
 ## IOS版本：
 一般iOS大家推荐 shadowrocket,Quantumult(X)，kitsunebi这些，但是quantumultX的健康检测自动选择节点功能总觉得不方便，近期小水滴：Pharos pro 支持导入clash了，导入本地yaml文件或者远程yaml文件下载。
+
+需要美区id购买下载，去淘宝或者发卡网买：https://dlj.tf/rBQ1Id
+
 官方telegram群：https://t.me/Pharos_x_Announcements
 
-导入视频参考：https://t.me/ysl_channel/718
+##### 导入方法：点击右上角“+添加”--“手动输入”--“clash”
+1）“从本地导入配置”：导入本地clash yaml格式文件,需要先把clash文件村的手机里
+2）“下载配置”：远程clash订阅
+
+导入视频参考：
+本地文件：https://t.me/ysl_channel/718
+远程clash订阅：https://t.me/ysl_channel/737
 
 # SwitchyOmega浏览器插件（可选）
 如果设置为系统代理则会全部都通过clash 分发。如果不想设置为系统代理则可以搭配

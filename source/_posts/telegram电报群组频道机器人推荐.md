@@ -5,6 +5,8 @@ tags: telegram
 
 telegram电报群三大主题:开车，政治，机场
 
+自己选感兴趣的关注，别贪多，容易信息爆炸
+
 自用稳定高速机场推荐：https://hongwan.xyz/2019/08/30/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E6%96%B9%E6%B3%95%E6%B1%87%E6%80%BB(%E5%85%8D%E8%B4%B9%E4%B8%8E%E4%BB%98%E8%B4%B9)/#more
 
 <!--more--> 
@@ -58,6 +60,12 @@ telegram电报群三大主题:开车，政治，机场
 
 [TestFlight 科技花](https://t.me/TestFlightCN)
 
+[科技圈的日常](https://t.me/misakatech)
+
+啥都有，信息量很大：
+[黑洞资源笔记](https://t.me/s/tieliu) 
+
+[Google Drive 资源：人人发资源](https://t.me/gdurl) 
 
 ### 开车群：
 

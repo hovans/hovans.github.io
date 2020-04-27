@@ -3,7 +3,9 @@ title: 如何在搬瓦工KVM上安装影梭和锐速
 tags: 翻墙
 ---
 
-目前不建议自己搭建了，自用机场推荐：http://dwz.date/wdx
+目前不建议自己搭建了，自用稳定高速机场推荐：https://hongwan.xyz/2019/08/30/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E6%96%B9%E6%B3%95%E6%B1%87%E6%80%BB(%E5%85%8D%E8%B4%B9%E4%B8%8E%E4%BB%98%E8%B4%B9)/#more
+
+
 搬瓦工购买:https://bandwagonhost.com/aff.php?aff=34663
 vultr：https://www.vultr.com/?ref=7277683
 
