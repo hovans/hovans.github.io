@@ -86,7 +86,7 @@ deploy:
   - type: git
     repo: https://github.com/hongwanzhang/hongwanzhang.github.io.git
     branch: master
-  - type: baidu_url_submitter
+  #- type: baidu_url_submitter
 
 jsonContent:
     meta: false
@@ -121,7 +121,7 @@ backup:
     #coding: git@git.dev.tencent.com:hongwanzhang/hongwanzhang.git,backup
 
 baidu_url_submit:
-  count: 33 ## 比如3，代表提交最新的三个链接
+  count: 0 ## 比如3，代表提交最新的三个链接
   host: http://hongwan.xyz ## 在百度站长平台中注册的域名
   token: igMCmnUY5rAExXGa ## 请注意这是您的秘钥， 请不要发布在公众仓库里!
   path: baidu_urls.txt ## 文本文档的地址， 新链接会保存在此文本文档里

@@ -12,6 +12,11 @@ tags: youtuber
 
 
 ###  1.科普：
+
+[DW Documentary](https://www.youtube.com/channel/UCW39zufHfsuGgpLviKh297Q) :德国之声
+
+[Wendover Productions](https://www.youtube.com/channel/UC9RM-iSvTu1uPJb8X5yp3EQ) :科普
+
 [回形针](https://www.youtube.com/channel/UCUGJ-yKqQHl4FSZwUmGpiUg)
 
 [柴知道](https://www.youtube.com/channel/UCQtwvRQWnT5Buh9hpvNNryQ)
@@ -66,11 +71,21 @@ leecode视频
 
 [on the roofs ](https://www.youtube.com/channel/UCiBCfXg5HoSxWQ9vMXUJbgg) :爬高空楼顶大佬
 
+[ArtSpear Entertainment](https://www.youtube.com/channel/UCmv8PJ2JcIsHQ-2ivtziszQ) :恶搞超级英雄电影，超赞
+
 [SpaceX ](https://www.youtube.com/channel/UCtI0Hodo5o5dUb67FeUjDeA) :SpaceX 官方
 
 [Astrum](https://www.youtube.com/channel/UC-9b7aDP6ZN0coj9-xFnrtw) :天文
 
 [FPSRussia ](https://www.youtube.com/channel/UCEPTp5WMAzjh9mOrKUwRLmQ) :玩具硬核
+
+[Quantum Tech HD](https://www.youtube.com/channel/UC4Tklxku1yPcRIH0VVCKoeA):短视频合集,工业
+
+[Diresta Machinery](https://www.youtube.com/channel/UCdUqdov4C4WBk5mD-m1DAqw):短视频合集
+
+[PuVideo](https://www.youtube.com/channel/UCeqzXvmktHP5Tv7NFzGrfZw):短视频合集
+
+[Wonder World](https://www.youtube.com/channel/UC0k173Oca1nPZurW2ITHlYw)
 
 [the Hacksmith](https://www.youtube.com/channel/UCjgpFI5dU-D1-kh9H1muoxQ) :硬核高配版手工耿
 
@@ -78,7 +93,7 @@ leecode视频
 
 [The Survival](https://www.youtube.com/channel/UCOtloDe4Ytw3X2v04uU91bA) : 挖洞
 
-[Primitive Technology](https://www.youtube.com/channel/UCAL3JXZSzSm8AlZyD3nQdBA)：澳洲的一个老哥体验原始人生活，从盖房种地到造窑生产铁。
+[Primitive Technology](https://www.youtube.com/channel/UCAL3JXZSzSm8AlZyD3nQdBA) ：澳洲的一个老哥体验原始人生活，从盖房种地到造窑生产铁。
 
 [Andy Phillip ](https://www.youtube.com/channel/UCDQz4H7tz6Fwu5_5rg4W6pA) ：下饭
 
@@ -147,6 +162,8 @@ leecode视频
 鬼畜：
 
 [梅川伊芙](https://www.youtube.com/channel/UCHrkvfuollkwjgGWAga8LLA)
+
+高登音樂台 HKGolden Music
 
 ### 7.其它
 [163 braces](https://www.youtube.com/channel/UCnmeiFVqv64lAmVaw2PUm7w) ：唱个好好听的妹纸；

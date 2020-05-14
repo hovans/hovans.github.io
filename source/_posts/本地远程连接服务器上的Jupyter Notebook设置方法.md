@@ -3,7 +3,7 @@ title: 本地远程连接服务器上的Jupyter Notebook设置方法
 tags: linux
 ---
 
-作者:彭滴
+作者:p小花
 
 使用Jupyter可以在本地电脑直接新建和编辑linux服务器的代码，比如python和R,非常方便；
 

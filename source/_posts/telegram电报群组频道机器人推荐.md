@@ -172,9 +172,14 @@ Quantumult X等相关：
 
  [4K Remux](https://t.me/Remux_2160P) 4K 资源收集
 
+ 社工库机器人 :@shegongkubot  :查信息
+
 ### 导航：
-[中文頻道群組搜索機器人](https://t.me/hao1234bot)
+[中文頻道群組搜索機器人](https://t.me/hao1234bot) ：搜索感兴趣的telegram群组
 
 政治：
 [导航：社会政治话题电报&群频道](https://t.me/shehuizhengzhi) 
 特别注明，外网很多消息是小道消息，真实性存疑，注意甄别。
+
+[中国数字时代消息推送](https://t.me/cdtchinesefeed)
+
