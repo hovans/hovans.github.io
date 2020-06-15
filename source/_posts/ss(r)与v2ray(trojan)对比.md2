@@ -1,0 +1,44 @@
+
+---
+title: ss/ssr/v2ray/trojan对比
+tags: 机场推荐
+---
+
+
+直观感受：同样的线路，速度差不多。ss的 ping值更低，v2ray起速更慢。
+
+
+<!--more--> 
+
+
+一、ss对比v2ray
+刚好买的ytoo这家机场 (http://dlj.tf/2FvsU5)
+有ss/v2ray线路，简单大概做个速度对比。
+1）
+ss线路：
+<div align=center>![avatar](/uploads/sssv2raytrojan/1ss.png)
+v2ray线路：
+
+<div align=center>![avatar](/uploads/sssv2raytrojan/1v2ray.png)
+
+结果其它用户的反馈，大部分时候ss更快一点。ss的ping值还小点，比如到美国/日本的线路。
+
+二、ssr对比trojan
+trojan属于轻量点的v2ray
+手上 奶瓶 这家ssr机场刚好有trojan节点;对比发现：
+trojan 延迟更高，SSR低：
+<div align=center>![avatar](/uploads/sssv2raytrojan/2ssr.png)
+
+<div align=center>![avatar](/uploads/sssv2raytrojan/2trojan.png)
+
+想要体验trojan，可以购买奶瓶 体验体验，有trojan节点 ：400G/25块/月,300G/45季度等。适合流量需求大的。主要是ssr，价格，流量，稳定相对平衡。官网：http://dlj.tf/ivRcrE
+其实大概都可以看得出，目前优势仍然是ss/ssr>v2ray/trojan,而且ss还可以使用原版clash.
+
+机场主要看的是线路!看带宽大小，直接影响你的速度！
+被墙大部分是直连线路，很容易被识别。中转和IPLC可解决。
+
+其它自用机场观察：
+
+https://hongwan.xyz/2019/08/30/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E6%96%B9%E6%B3%95%E6%B1%87%E6%80%BB(%E5%85%8D%E8%B4%B9%E4%B8%8E%E4%BB%98%E8%B4%B9)/
+
+

@@ -134,7 +134,16 @@ yum install shadowsocks-libev
 
 ```
 修改配置文件：/etc/shadowsocks-libev/config.json
-
+```
+{
+    "server":"0.0.0.0",
+    "server_port":外网端口,
+    "local_port":1080,
+    "password":"密码",
+    "timeout":60,
+    "method":"aes-256-cfb"
+}
+```
 使用命令systemctl enable shadowsocks-libev将ss加入开机启动，
 之后执行systemctl start shadowsocks-libev启动。
 命令systemctl status shadowsocks-libev可以查看ss服务的状态。
@@ -175,7 +184,12 @@ ssr开启全局模式，同时如果要访问192.*，127.*这些网址，需要�
 <div align=center>![avatar](/uploads/frp/2.png)
 
 如果不想全局模式，则可以使用clash分流：
-具体使用教程参考另外一篇博客：Clash各版本(win,mac,linux)使用教程(增加规则,搭配Proxy SwitchyOmega)：  http://hongwan.xyz/2019/11/28/clash%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B(%E6%90%AD%E9%85%8DProxy%20SwitchyOmega)/#more
+
+
+
+具体使用教程参考另外两篇博客：Clash各版本(win,mac,linux)使用教程(增加规则,搭配Proxy SwitchyOmega)：  http://hongwan.xyz/2019/11/28/clash%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B(%E6%90%AD%E9%85%8DProxy%20SwitchyOmega)/#more
+
+[使用clash对frp与shadowsocks内网穿透分流](https://hongwan.xyz/2020/05/17/frp,shadowsocks,clash/)
 
 
 ### 使用xshell连接服务器，需要设置代理：

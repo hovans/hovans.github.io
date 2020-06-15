@@ -5,6 +5,8 @@ tags: 机场推荐
 top: true
 ---
 
+** 建议收藏本页，持续更新 **
+
 科学上网为了搞科学和学习，请不要参与政治讨论；
 墙外不是法外，低调。在墙外发表反动言论仍然可以定位到你请你喝茶，非常危险！
 
@@ -22,16 +24,13 @@ top: true
 免翻墙，github下载地址:https://dlj.tf/yz75wM
 官网，需要翻墙才能打开 : https://geph.io/zhs/
 
-** landeng **：https://github.com/getlantern/ （免费限制500M）
-下面有些链接被墙了,可以先用蓝灯打开
+** landeng **：https://github.com/getlantern/ 
+免费限制500M，下面有些链接被墙了,可以先用蓝灯打开
 
 ** 赛风 **：https://psiphon3.com/zh/index.html  （免费,不稳定）
 
 
-
-
-
-### 2.shadowsocks和V2ray：
+### 2.shadowsocks(R)和V2ray：
 
 账号：
 
@@ -44,7 +43,10 @@ vps 和线路注定，稳定&流量多&便宜==不存在
 <div align=center>![avatar](/uploads/vpn/0.jpg)
 
 规律：
-** 机场面板基本用的那几套，主要还是看机场主买的线路质量。一分钱一分货，越贵越好，不推荐买直连ss/ssr机场，v2ray起速慢点。尽量选择有ILPC国际专线和BGP中转的，比较稳 ** 
+
+** 机场面板基本用的那几套，主要还是看机场主买的线路质量。一分钱一分货，越贵越好，不推荐买直连ss/ssr机场，v2ray起速慢点。尽量选择有ILPC国际专线和中转的，比较稳 **
+
+拿2020年两会期间某家机场公告举个例子：“经证实，墙是持续性的，通俗易懂来讲他每15分钟墙一波，目前受影响的为所有直连ssr节点，v2ray直连持续性断流，目前暂停修复所有直连线路，待两会结束后再进行修复，V1请尽量使用IPLC线路，其他套餐的会员请使用中转线路。”
 
 新开机场为了吸引人一开始价格便宜，价格便宜很容易吸引大量用户，但是久了人数多了机场主必须要加线路或者提高带宽扩容来保证体验，否则必然速度降低并且不稳定。而扩容又必须要花钱，所以如果机场主想继续保持良性发展，必然会慢慢涨价；但黑心的机场主可能收割一波就跑路了，因此买小机场需要小心。
 
@@ -56,7 +58,7 @@ vps 和线路注定，稳定&流量多&便宜==不存在
 [YTOO](https://ytoo.li/aff.php?aff=40),[yoyu](http://dlj.tf/EcazCR)：这两家每次墙加高，大规模封IP的时候都稳得一匹，如果这两家倒了，其它家也不用买了。多持是为了多重保证。
 
 ** 1.[yoyu](http://dlj.tf/EcazCR) **: 
-ss/ssr 中转和专线机场,100+条线路，有很多0.2和-0.5倍率节点（0.2倍率表示使用1G流量只算你200M，50G实际是100-250G），快又稳!（半年付起，提高了加入门槛，筛选优质用户）
+ss/ssr 中转和专线机场,100+条线路，有很多0.2和-0.5倍率节点（0.2倍率表示使用1G流量只算你200M，50G实际是100-250G），快又稳!不限制ip和客户端数目（半年付起，提高了加入门槛，筛选优质用户）
 推荐 【pro套餐】:
 50g（0.2倍=250G / 0.3倍=167G  / 0.4倍=125G / 0.5倍=100G）：342/年；
 100g（0.2倍=500G / 0.3倍=333G / 0.4倍=250G / 0.5倍=200G）：684/年；
@@ -68,7 +70,7 @@ ss/ssr 中转和专线机场,100+条线路，有很多0.2和-0.5倍率节点（0
 
 <div align=center>![avatar](/uploads/vpn/yoyu.png)
 
-** 2.[YTOO](http://dlj.tf/2FvsU5) **: v2ray全中转机场，也有ss节点，目前用着挺好,倍率0.2和0.6都有，速度一流（0.6倍率表示使用1G流量只算你600M,所以50G实际大概是80G）等，季付起，
+** 2.[YTOO](http://dlj.tf/2FvsU5) **: v2ray全中转机场，也有ss节点，目前用着挺好,倍率0.2和0.6都有，速度一流（0.6倍率表示使用1G流量只算你600M,所以50G实际大概是80G）等，季付起，不限制ip和客户端数目
 
 50G(0.2倍=250G/0.5倍=100G/0.6倍=83G) :249/年
 100G(0.2倍=500G/0.5倍=200G/0.6倍=166G):369/年
@@ -81,75 +83,46 @@ ss/ssr 中转和专线机场,100+条线路，有很多0.2和-0.5倍率节点（0
 <div align=center>![avatar](/uploads/vpn/ytoo2.jpg)
 
 
-
 ### 其它用过的机场观察
-#### 便宜佛系随缘机场：
 
 ** [布丁](http://dlj.tf/MRGID5) **:v2ray机场，88块一年，每个月128G流量；128块一年的256G/月等套餐。人多了会加线路和分组，算不错了。有一块钱试用的套餐，可以先试试水感受感受再决定买不买。 官网：http://dlj.tf/MRGID5 ★★★☆
 <div align=center>![avatar](/uploads/vpn/puding.png)
-
 可以和上面主用的对比下,价格决定了
-
-#### 其它机场观察
-
-** [just my sock](https://justmysocks.net/members/aff.php?aff=3207)**,搬瓦工官方的ss机场，CN2 GIA线路，速度是可以的；优点是比较安全，5条ip线路，5.88刀/月/500G起,5.2%折扣循环优惠码：JMS9272283 ；之前买了年费，目前改为aes-256-gcm加混淆后好多了;
-买了一年的[搬瓦工的CN2 GIA服务器](https://bandwagonhost.com/aff.php?aff=34663)用这套配置也可以。在用 ★★☆
-
-** 极游 ** ：之前的万人3元便宜机场，买了第一个月的时候还行，买年费后就不行了，然后涨价了，被迫换套餐，但是现在也频繁崩。同时工单没有人处理，反正虽然便宜但不建议买。☆
-
-** 佩奇nex **：中转ss/ssr机场，80块一个月400G流量,略贵，月付的线路没有年付好，人数不少,但树大招风，有时被ddos。
-** amytele **:佩奇家分站，中转，25块60G，55块400G，不如直接买年费佩奇，人数不少，还行，但树大招风，有时被ddos。
-** N3RO **: IPLC加中转线路,买过，还行，但是之前不省心的感觉
-** 海豚湾 ** ：买的团队套餐3000块/年。人太多，速度不行
-** ssrcloud **： 平时还好，国庆不太稳定,但是便宜，公告老吹牛逼
-** x-air **：(V2ray机场) 20一个月,只是进阶版；高级一般；年费才能高级版，110 半年1T 流量。线路比较偏。
-** CordCloud ** ：国庆伤亡惨重,但是便宜，现在人太多了明显，不推荐。☆
-
-
-### 其它未测试：
-** [bywave](https://dlj.tf/TDOEXd) **:中继和iplc， v2ray机场,25块50G起，有按流量计费套餐；据说还行；目前有89折优惠码WUHAN + 充值送活动；使用优惠码 FQ3EXMF18Y 可在选购年付、两年付、三年付时获得一次性7折优惠
-使用优惠码 P9QYA4VZ90 可在选购所有付款周期的产品时获得循环8折优惠;  目前人数不多。 官网：https://dlj.tf/TDOEXd
-<div align=center>![avatar](/uploads/vpn/bywave.png)
 
 ** [奶瓶](http://dlj.tf/ivRcrE) **：400G/25块/月,300G/45季度等。适合流量需求大的。主要是ssr，提供Trojan节点,据说价格，流量，稳定相对平衡;官网：http://dlj.tf/ivRcrE
 <div align=center>![avatar](/uploads/vpn/naiping.png)
 
+** [bywave](https://dlj.tf/TDOEXd) **:中继和iplc， v2ray机场,25块50G起，有按流量计费套餐；据说还行；主页经常有各种优惠活动，目前人数不多。 官网：https://dlj.tf/TDOEXd
+<div align=center>![avatar](/uploads/vpn/bywave.png)
+
+** fastlink **：IPLC与中转+anycast，19.9/月起。有6块和8块的体验套餐。不限制ip和客户端数目； https://dlj.tf/k2Q2zOx
+<div align=center>![avatar](/uploads/vpn/fastlink.png)
 
 
-** richcloud **: 高贵，但是据说服务态度不好。
-** 魅影 **：不定时开放注册，谁会天天干等着。。。
-** Dler **：之前机场主失踪好久，不管事，技术流=折腾，蛋疼
-** 202Net **：（中转机场） 50元/月 ,可以多客户端，但是不可以多ip
-** 梦迪 **：看上去还不错
-** 贼船 **：可以
-** 喵帕斯 **:无限流量，看总IP时长。推荐3级，60块一个月，需要邀请码，算了算了。
-** aaex ** : 100块/月；不限制流量；120G/588/年；以后拿来下数据。
+** CT2N **：9.9/月起。有1.9试用。人少。还有6折和8折优惠。官网：https://dlj.tf/MHUXbHW
+<div align=center>![avatar](/uploads/vpn/ct2n.png)
 
-** Blinkload **：(只能年费，开会期间bgp慢，youtube打了不少广告)
-** V2rayPro **：据说稳定性不好
-** 次元链接 **：(伤亡惨重,不建议)
-** 墙裂 **：维护慢
-** [MunCloud](http://dlj.tf/QeZwe6)**：15块/月/100G起
-** flycloud **：开会期间SSR全线瘫痪。剩余的V2之类的虽然可以用，但是极其不稳定。
-** KyCloud **：国庆伤亡惨重
+** 全球通 **：ssr中继机场，10块月付起，也有1块钱的试用套餐。人少。官网：https://dlj.tf/xRMMAaC
+<div align=center>![avatar](/uploads/vpn/qqt.png)
 
-其它：
-** 墙裂 ** ：维护非常慢
-** 心阶 **：5台客户端，半跑路，不稳定，别买
-** 蓝岸 **：只有年付,不稳定不推荐c
-** 厘米云iplcm** ： 只有一个ip 限制客户端数目，不安全。
-** 咸鱼 **：：https://saltytuna.club/userinfo 不可以超过4个ip
-** sockboom **:10个客户端
-** 厘米云 **：只有一个ip 限制客户端数目
-** cloudfree **：只有一个人使用，5块100g,15块300G
+
+** [just my sock]**,搬瓦工官方的ss/v2ray机场，CN2 GIA线路，买了年费的我表示后悔，不建议买，速度和稳定性都不行。 ☆
+买了一年的[搬瓦工的CN2 GIA服务器]也一样 ☆
+** 海豚湾 ** ：买的团队套餐3000块/年。人太多，速度不行
+** CordCloud ** ：国庆伤亡惨重,但是便宜，现在人太多了明显，不推荐。☆
+** 极游 ** ：之前的万人3元便宜机场，买了第一个月的时候还行，买年费后就不行了，然后涨价了，被迫换套餐，但是现在也频繁崩。同时工单没有人处理，反正虽然便宜但不建议买。☆
+
+
+
+客户端推荐使用clash  ,可以定制规则，v2ray和ss/ssr可以一起使用，自动选择最快的节点，具体使用教程参考另外一篇博客：Clash各版本(win,mac,linux)使用教程：  http://hongwan.xyz/2019/11/28/clash%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B(%E6%90%AD%E9%85%8DProxy%20SwitchyOmega)/#more
 
 
 ##### 免费机场/白嫖机场 ：
-免费节点不适合长时间使用，但是可以用来过渡打开暂时打不开的网站
+免费节点不适合长时间使用，但是可以用来过渡打开暂时打不开的网站，有些免费是暂时的，当前可能没有免费活动了
 
 付费的机场也会有免费节SS/SSR点使用：
-** 速鹰666  **：http://dlj.tf/bkFUpq ；付费节点9块/100G/月起
-** 孤岛养鸡场 **: http://dlj.tf/yCVgLQ ；付费的88GB/15.9块/月起
+** 速鹰666  **：http://dlj.tf/bkFUpq 
+** 孤岛养鸡场 **: http://dlj.tf/yCVgLQ 
 ** 金字塔 ** ：https://dlj.tf/gt1NNG，有免费中继节点
 ** 糖果屋 ** ：http://www.52ss.club/
 ** DripCloud **:https://dripcloud.net/
@@ -177,9 +150,7 @@ ss/ssr 中转和专线机场,100+条线路，有很多0.2和-0.5倍率节点（0
 ** http://ss.pythonic.life/full **
 ** https://www.youneed.win/free-ssr **
 
-白嫖免费机场telegram消息群：
-[https://t.me/baipiaohao](https://t.me/baipiaohao)
-[https://t.me/QBMWW](https://t.me/QBMWW)
+
 
 可以直接打开：
 ** https://fanqiang.network/ **
@@ -187,13 +158,9 @@ ss/ssr 中转和专线机场,100+条线路，有很多0.2和-0.5倍率节点（0
 
 另外一个大量收集的：https://github.com/hongwanzhang/Share-SSR-V2ray/blob/master/1-share-ssr-v2ray.md
 
-[免费节点 | SS / SSR / V2Ray 节点分享](https://merlinblog.xyz/wiki/freess.html?nsukey=X6a51%2B%2B9mnMNDwiq5uSIfLIgLC6v8Jdd%2FOPOvRweY5V4XDF15U4htVtFHHmpAzDVtwWZsjIJg2iCBynTG%2BA%2FgrZ1VxyNxraYkBPWLJPmSyapxDzxJ%2Be7aXHSpVz9TeSSQKYWxqR%2BgcJTRkyVNqTkMQyQRTRvLS%2FqZWc74ZyhQY68U69PyZnIHW9XZen%2FrmKyA0BIv%2B2%2BrZhLZ5Tl8BqnPg%3D%3D
-)
+[免费节点 | SS / SSR / V2Ray 节点分享](https://merlinblog.xyz/wiki/freess.html?nsukey=X6a51%2B%2B9mnMNDwiq5uSIfLIgLC6v8Jdd%2FOPOvRweY5V4XDF15U4htVtFHHmpAzDVtwWZsjIJg2iCBynTG%2BA%2FgrZ1VxyNxraYkBPWLJPmSyapxDzxJ%2Be7aXHSpVz9TeSSQKYWxqR%2BgcJTRkyVNqTkMQyQRTRvLS%2FqZWc74ZyhQY68U69PyZnIHW9XZen%2FrmKyA0BIv%2B2%2BrZhLZ5Tl8BqnPg%3D%3D)
 
 
-客户端推荐使用clash  ,可以定制规则，v2ray和ss 可以一起使用，自动选择最快的节点
-
-具体使用教程参考另外一篇博客：Clash各版本(win,mac,linux)使用教程(增加规则,搭配Proxy SwitchyOmega)：  http://hongwan.xyz/2019/11/28/clash%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B(%E6%90%AD%E9%85%8DProxy%20SwitchyOmega)/#more
 
 
 ##### 自己搭建,经常会被干扰，容易被封IP：

@@ -1,0 +1,93 @@
+
+---
+title: SSR和V2ray免费机场/免费vpn
+tags: 机场推荐
+top: true
+---
+
+科学上网为了搞科学和学习，请不要参与政治讨论；
+墙外不是法外，低调。在墙外发表反动言论仍然可以定位到你请你喝茶，非常危险！
+
+
+<!--more--> 
+
+免费机场/白嫖机场
+
+### 1.软件
+
+** 迷雾通 ** ： 免费
+免翻墙，github下载地址:https://dlj.tf/yz75wM
+官网，需要翻墙才能打开 : https://geph.io/zhs/
+
+** landeng **：https://github.com/getlantern/ 
+免费限制500M，下面有些链接被墙了,可以先用蓝灯打开
+
+** 赛风 **：https://psiphon3.com/zh/index.html  （免费,不稳定）
+
+
+### 2.shadowsocks(R)和V2ray：
+
+
+客户端推荐使用clash  ,可以定制规则，v2ray和ss/ssr可以一起使用，自动选择最快的节点，具体使用教程参考另外一篇博客：Clash各版本(win,mac,linux)使用教程：  http://hongwan.xyz/2019/11/28/clash%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B(%E6%90%AD%E9%85%8DProxy%20SwitchyOmega)/#more
+
+
+##### 免费机场/白嫖机场 ：
+有些免费是暂时的，当前可能没有免费活动了
+
+付费的机场也会有免费节SS/SSR点使用：
+** 速鹰666  **：http://dlj.tf/bkFUpq 
+** 孤岛养鸡场 **: http://dlj.tf/yCVgLQ 
+** 金字塔 ** ：https://dlj.tf/gt1NNG，有免费中继节点
+** 糖果屋 ** ：http://www.52ss.club/
+** DripCloud **:https://dripcloud.net/
+** 闪电 **：http://dlj.tf/gDlOUx ;付费节点也挺便宜的
+** good.mebi.me ** ：https://good.mebi.me
+** sheepcloud ** ：https://www.sheepcloud.me/
+** https://shadowsocks-share.herokuapp.com/ **
+** https://www.ssrshare.com/ **
+** 中二病 **,https://zhoerbing.com/user，购买第一个输入优惠码：你才中二，
+** kiki **：https://kiki666.com ，纯白嫖
+** Eiz **：只有两条线，  https://portal.eiz.me/
+** 司徒云 **： 中转线路，白嫖的某些节点无限流量的 https://situcloud.xyz
+** 星梦数据**：    https://hualuows.xyz/
+** 道长加速云 **：   dzjs1.xyz/
+** tan90 ** ： 比较冷门 https://tan90.best/auth/register?code=9OIj
+** 青青草原灰太狼 ** ： 白嫖俄罗斯节点 https://4312ru.xyz/auth/register?code=s5Zv
+
+
+需要先翻墙才打得开或者看得到：
+** 几鸡 **：https://ji-ag.pw/waf/ojZb2 ,每月初始10G流量，每天签到0.8~5GB
+** neuk **: https://neukssr.club/auth/register?code=0EDM
+** free-ss ** ：https://free-ss.site
+** https://lncn.org/ **
+** https://www.ssrtool.com/tool/free_ssr **
+** http://ss.pythonic.life/full **
+** https://www.youneed.win/free-ssr **
+
+
+
+可以直接打开：
+** https://fanqiang.network/ **
+敌对势力提供的：https://github.com/Alvin9999/new-pac/wiki/ss%E5%85%8D%E8%B4%B9%E8%B4%A6%E5%8F%B7
+
+另外一个大量收集的：https://github.com/hongwanzhang/Share-SSR-V2ray/blob/master/1-share-ssr-v2ray.md
+
+[免费节点 | SS / SSR / V2Ray 节点分享](https://merlinblog.xyz/wiki/freess.html?nsukey=X6a51%2B%2B9mnMNDwiq5uSIfLIgLC6v8Jdd%2FOPOvRweY5V4XDF15U4htVtFHHmpAzDVtwWZsjIJg2iCBynTG%2BA%2FgrZ1VxyNxraYkBPWLJPmSyapxDzxJ%2Be7aXHSpVz9TeSSQKYWxqR%2BgcJTRkyVNqTkMQyQRTRvLS%2FqZWc74ZyhQY68U69PyZnIHW9XZen%2FrmKyA0BIv%2B2%2BrZhLZ5Tl8BqnPg%3D%3D
+)
+
+
+### 3.谷歌浏览器插件
+免费的小心被钓鱼和个人信息
+可以使用https://www.gugeapps.net/ 这个谷歌镜像镜像搜索安装；
+
+** 谷歌访问助手 **：http://www.ggfwzs.com/ ：免费使用12小时，永久使用会要求你绑定主页；口碑还行
+** setup vpn **：(免费)
+** hoxx vpn proxy **:（免费）
+** skyZIP™ Proxy ** :（免费）
+
+### 4.改hosts
+可以使用工具一键更改，也可以手动改，主要是很容易失效，需要经常改，比较麻烦
+https://github.com/kelthuzadx/hosts
+
+另外一个大佬收集的各种工具：https://github.com/hongwanzhang/Share-SSR-V2ray)
+

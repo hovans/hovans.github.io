@@ -5,7 +5,7 @@ tags: 翻墙
 
 
 由于极路由最新版本安装不了shadowsocks，所以需要降级安装：
-自用机场推荐：http://bit.ly/32wTSW3
+
 
 <!--more--> 
 ## 降级视频教程：

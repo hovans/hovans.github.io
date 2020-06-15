@@ -7,7 +7,7 @@ telegram电报群三大主题:开车，政治，机场
 
 自己选感兴趣的关注，别贪多，容易信息爆炸
 
-自用稳定高速机场推荐：https://hongwan.xyz/2019/08/30/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E6%96%B9%E6%B3%95%E6%B1%87%E6%80%BB(%E5%85%8D%E8%B4%B9%E4%B8%8E%E4%BB%98%E8%B4%B9)/#more
+
 
 <!--more--> 
 
@@ -177,9 +177,5 @@ Quantumult X等相关：
 ### 导航：
 [中文頻道群組搜索機器人](https://t.me/hao1234bot) ：搜索感兴趣的telegram群组
 
-政治：
-[导航：社会政治话题电报&群频道](https://t.me/shehuizhengzhi) 
-特别注明，外网很多消息是小道消息，真实性存疑，注意甄别。
 
-[中国数字时代消息推送](https://t.me/cdtchinesefeed)
 
