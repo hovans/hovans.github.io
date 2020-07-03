@@ -6,7 +6,7 @@ tags: 远程桌面
 
 总结：
 充值可加速！
-不管有无公网vps,都可以使用：向日葵，teamviewer破解版
+不管有无公网vps,都可以使用：todesk,向日葵，teamviewer破解版
 有公网vps：使用frp,ngrok等自己搭建搭配mstsc RDP，比较安全
 无公网vps：使用natfrp，zerotier，小米云ngrok等第三方提供的公网ip
 
@@ -15,7 +15,15 @@ teamviewer破解版>向日葵>自建frp内网搭配RDP>natfrp>小米云ngrok>zer
 
 
 <!--more--> 
-### teamviewer 突破商业限制破解版
+
+### todesk
+
+这个软件是新发现的，还挺流畅的，主要是免费，缺点是个国内小公司的，不知道安全性如何。
+https://www.todesk.com/download.html
+
+
+
+### teamviewer 突破商业限制破解版(貌似失效了)
 
 1)俄罗斯大神破解版,安全性自测：[https://lrepacks.ru/](https://lrepacks.ru/)
 2)[fxxkmakeding](www.fxxkmakeding.xyz/)
@@ -26,7 +34,7 @@ teamviewer破解版>向日葵>自建frp内网搭配RDP>natfrp>小米云ngrok>zer
 ### 有公网vps,使用frp,ngrok等自己搭建搭配RDP
 推荐mstsc RDP主要是windows自带，而且速度很好
 
-具体参考上篇文章；[frp,ngrok搭配shadowsocks内网穿透与RPD远程桌面](https://hongwan.xyz/2019/12/07/frp,ngrok%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/#more)
+具体参考上篇文章；[frp,ngrok搭配shadowsocks内网穿透与RPD远程桌面](https://honven.xyz/2019/12/07/frp,ngrok%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/#more)
 
 可以同时搭配shadowsocks实现搭建内网vpn
 
@@ -43,7 +51,7 @@ teamviewer破解版>向日葵>自建frp内网搭配RDP>natfrp>小米云ngrok>zer
 <div align=center>![avatar](/uploads/RDP/3.png)
 
 #### 2. [小米球ngrok](http://ngrok.ciqiuwl.cn/)
-具体参考上篇文章；[frp,ngrok搭配shadowsocks内网穿透与RPD远程桌面](https://hongwan.xyz/2019/12/07/frp,ngrok%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/#more)
+具体参考上篇文章；[frp,ngrok搭配shadowsocks内网穿透与RPD远程桌面](https://honven.xyz/2019/12/07/frp,ngrok%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/#more)
 
 ### 3.[zerotier](https://www.zerotier.com/)
 

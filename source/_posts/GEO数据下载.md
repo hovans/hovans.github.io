@@ -117,7 +117,7 @@ gdc-client.exe download -t gdc-user-token文件  -m  gdc_manifest文件
 由于下载文件非常大，因此会断：
 所以写了个断了之后运行可以检测哪些下载了，哪些没有下载，并且继续下载没有下载的部分的脚步；暂时没有实现自动检测
 
-[https://github.com/hongwanzhang/TCGAdownload/blob/master/chongqi.py](https://github.com/hongwanzhang/TCGAdownload/blob/master/chongqi.py)
+[https://github.com/honvezhang/TCGAdownload/blob/master/chongqi.py](https://github.com/honvezhang/TCGAdownload/blob/master/chongqi.py)
 
 更改这一句：
 ```

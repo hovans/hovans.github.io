@@ -11,5 +11,5 @@ Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
 
-Sitemap: http://hongwan.xyz/sitemap.xml
-Sitemap: http://hongwan.xyz/baidusitemap.xml
+Sitemap: http://honven.xyz/sitemap.xml
+Sitemap: http://honven.xyz/baidusitemap.xml

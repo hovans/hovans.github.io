@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 红丸
+title: honven
 subtitle:
 description: 
 keywords:
-author: 红丸
+author: honven
 language: zh-CN
 timezone:
 
@@ -17,7 +17,7 @@ baidusitemap:
   path: baidusitemap.xml
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://hongwan.xyz
+url: http://honven.xyz
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -81,10 +81,10 @@ theme: next
 avatar: /uploads/head.jpg
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
-#github: git@github.com:hongwanzhang/hongwanzhang.github.io.git,master
+#github: git@github.com:honven/honven.github.io.git,master
 deploy:
   - type: git
-    repo: https://github.com/hongwanzhang/hongwanzhang.github.io.git
+    repo: https://github.com/honven/honven.github.io.git
     branch: master
   #- type: baidu_url_submitter
 
@@ -115,13 +115,13 @@ lazyload:
 backup:
   type: git
   theme: next
-  message: Back up my hongwan.xyz blog
+  message: Back up my honven.xyz blog
   repository:
-    github: git@github.com:hongwanzhang/hongwanzhang.github.io.git,backup
-    #coding: git@git.dev.tencent.com:hongwanzhang/hongwanzhang.git,backup
+    github: git@github.com:honven/honven.github.io.git,backup
+    #coding: git@git.dev.tencent.com:honven/honven.git,backup
 
 baidu_url_submit:
   count: 0 ## 比如3，代表提交最新的三个链接
-  host: http://hongwan.xyz ## 在百度站长平台中注册的域名
+  host: http://honven.xyz ## 在百度站长平台中注册的域名
   token: igMCmnUY5rAExXGa ## 请注意这是您的秘钥， 请不要发布在公众仓库里!
   path: baidu_urls.txt ## 文本文档的地址， 新链接会保存在此文本文档里

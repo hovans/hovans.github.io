@@ -187,9 +187,9 @@ ssr开启全局模式，同时如果要访问192.*，127.*这些网址，需要�
 
 
 
-具体使用教程参考另外两篇博客：Clash各版本(win,mac,linux)使用教程(增加规则,搭配Proxy SwitchyOmega)：  http://hongwan.xyz/2019/11/28/clash%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B(%E6%90%AD%E9%85%8DProxy%20SwitchyOmega)/#more
+具体使用教程参考另外两篇博客：Clash各版本(win,mac,linux)使用教程(增加规则,搭配Proxy SwitchyOmega)：  http://honve.xyz/2019/11/28/clash%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B(%E6%90%AD%E9%85%8DProxy%20SwitchyOmega)/#more
 
-[使用clash对frp与shadowsocks内网穿透分流](https://hongwan.xyz/2020/05/17/frp,shadowsocks,clash/)
+[使用clash对frp与shadowsocks内网穿透分流](https://honve.xyz/2020/05/17/frp,shadowsocks,clash/)
 
 
 ### 使用xshell连接服务器，需要设置代理：

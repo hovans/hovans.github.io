@@ -60,7 +60,7 @@ handle=Entrez.esummary(db="gds",id=myid)
 两年之前做的这个，主要是为了方便自己和实验室的同学做数据收集
 
 github 地址：
-[https://github.com/hongwanzhang/-Biopython-GEO-](https://github.com/hongwanzhang/-Biopython-GEO-)
+[https://github.com/honvezhang/-Biopython-GEO-](https://github.com/honvezhang/-Biopython-GEO-)
 
 ### 使用方法：
 python onlyGSE.py +关键字 

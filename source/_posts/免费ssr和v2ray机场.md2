@@ -28,7 +28,7 @@ top: true
 ### 2.shadowsocks(R)和V2ray：
 
 
-客户端推荐使用clash  ,可以定制规则，v2ray和ss/ssr可以一起使用，自动选择最快的节点，具体使用教程参考另外一篇博客：Clash各版本(win,mac,linux)使用教程：  http://hongwan.xyz/2019/11/28/clash%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B(%E6%90%AD%E9%85%8DProxy%20SwitchyOmega)/#more
+客户端推荐使用clash  ,可以定制规则，v2ray和ss/ssr可以一起使用，自动选择最快的节点，具体使用教程参考另外一篇博客：Clash各版本(win,mac,linux)使用教程：  http://honven.xyz/2019/11/28/clash%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B(%E6%90%AD%E9%85%8DProxy%20SwitchyOmega)/#more
 
 
 ##### 免费机场/白嫖机场 ：
@@ -70,7 +70,7 @@ top: true
 ** https://fanqiang.network/ **
 敌对势力提供的：https://github.com/Alvin9999/new-pac/wiki/ss%E5%85%8D%E8%B4%B9%E8%B4%A6%E5%8F%B7
 
-另外一个大量收集的：https://github.com/hongwanzhang/Share-SSR-V2ray/blob/master/1-share-ssr-v2ray.md
+另外一个大量收集的：https://github.com/honvenzhang/Share-SSR-V2ray/blob/master/1-share-ssr-v2ray.md
 
 [免费节点 | SS / SSR / V2Ray 节点分享](https://merlinblog.xyz/wiki/freess.html?nsukey=X6a51%2B%2B9mnMNDwiq5uSIfLIgLC6v8Jdd%2FOPOvRweY5V4XDF15U4htVtFHHmpAzDVtwWZsjIJg2iCBynTG%2BA%2FgrZ1VxyNxraYkBPWLJPmSyapxDzxJ%2Be7aXHSpVz9TeSSQKYWxqR%2BgcJTRkyVNqTkMQyQRTRvLS%2FqZWc74ZyhQY68U69PyZnIHW9XZen%2FrmKyA0BIv%2B2%2BrZhLZ5Tl8BqnPg%3D%3D
 )
@@ -89,5 +89,5 @@ top: true
 可以使用工具一键更改，也可以手动改，主要是很容易失效，需要经常改，比较麻烦
 https://github.com/kelthuzadx/hosts
 
-另外一个大佬收集的各种工具：https://github.com/hongwanzhang/Share-SSR-V2ray)
+另外一个大佬收集的各种工具：https://github.com/honvenzhang/Share-SSR-V2ray)
 

@@ -5,7 +5,7 @@ tags: 内网穿透
 
 只适用于在外部，在内网别设置！
 
-[上回说到使用frp搭配shadowsocks搭建内网穿透通道](https://hongwan.xyz/2019/12/07/frp,ngrok%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/)
+[上回说到使用frp搭配shadowsocks搭建内网穿透通道](https://honve.xyz/2019/12/07/frp,ngrok%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/)
 
 现在则需要使用clash进行分流，从而可以同时科学上网与内网穿透，这也是clash的优点
 
