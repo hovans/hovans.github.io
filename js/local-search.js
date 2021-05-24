@@ -1,140 +1,160 @@
-'use strict';
-function _toConsumableArray(e) {
-    if (Array.isArray(e)) {
-        for (var t = 0, n = Array(e.length); t < e.length; t++)
-            n[t] = e[t];
-        return n;
+/* global CONFIG */
+
+(function() {
+  // Modify by [hexo-generator-search](https://github.com/wzpan/hexo-generator-search)
+  function localSearchFunc(path, searchSelector, resultSelector) {
+    'use strict';
+    // 0x00. environment initialization
+    var $input = jQuery(searchSelector);
+    var $result = jQuery(resultSelector);
+
+    if ($input.length === 0) {
+      // eslint-disable-next-line no-console
+      throw Error('No element selected by the searchSelector');
     }
-    return Array.from(e);
-}
-window.addEventListener('DOMContentLoaded', function () {
-    var n = !1, r = void 0, o = !0, e = CONFIG.path;
-    0 === e.length ? e = 'search.xml' : /json$/i.test(e) && (o = !1);
-    function T(e, t, n) {
-        var r = e.length;
-        if (0 === r)
-            return [];
-        var o = 0, a = [], i = [];
-        for (n || (t = t.toLowerCase(), e = e.toLowerCase()); -1 < (a = t.indexOf(e, o));)
-            i.push({
-                position: a,
-                word: e
-            }), o = a + r;
-        return i;
+    if ($result.length === 0) {
+      // eslint-disable-next-line no-console
+      throw Error('No element selected by the resultSelector');
     }
-    function E(e, t, n, r) {
-        for (var o = n[n.length - 1], a = o.position, i = o.word, c = [], s = 0; a + i.length <= t && 0 !== n.length;) {
-            i === r && s++, c.push({
-                position: a,
-                length: i.length
-            });
-            var l = a + i.length;
-            for (n.pop(); 0 !== n.length && (a = (o = n[n.length - 1]).position, i = o.word, a < l);)
-                n.pop();
+
+    if ($result.attr('class').indexOf('list-group-item') === -1) {
+      $result.html('<div class="m-auto text-center"><div class="spinner-border" role="status"><span class="sr-only">Loading...</span></div><br/>Loading...</div>');
+    }
+
+    $.ajax({
+      // 0x01. load xml file
+      url     : path,
+      dataType: 'xml',
+      success : function(xmlResponse) {
+        // 0x02. parse xml file
+        var dataList = jQuery('entry', xmlResponse).map(function() {
+          return {
+            title  : jQuery('title', this).text(),
+            content: jQuery('content', this).text(),
+            url    : jQuery('url', this).text()
+          };
+        }).get();
+
+        if ($result.html().indexOf('list-group-item') === -1) {
+          $result.html('');
         }
-        return {
-            hits: c,
-            start: e,
-            end: t,
-            searchTextCount: s
-        };
-    }
-    function q(n, e) {
-        var r = '', o = e.start;
-        return e.hits.forEach(function (e) {
-            r += n.substring(o, e.position);
-            var t = e.position + e.length;
-            r += '<b class="search-keyword">' + n.substring(e.position, t) + '</b>', o = t;
-        }), r += n.substring(o, e.end);
-    }
-    function t() {
-        var x = c.value.trim().toLowerCase(), L = x.split(/[-\s]+/);
-        1 < L.length && L.push(x);
-        var S = [];
-        if (0 < x.length && r.forEach(function (e) {
-                if (e.title) {
-                    var t = 0, n = e.title.trim(), r = n.toLowerCase(), o = e.content ? e.content.trim().replace(/<[^>]+>/g, '') : '';
-                    CONFIG.localsearch.unescape && (o = String(o).replace(/&quot;/g, '"').replace(/&#39;/g, '\'').replace(/&#x3A;/g, ':').replace(/&#(\d+);/g, function (e, t) {
-                        return String.fromCharCode(t);
-                    }).replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&'));
-                    var a = o.toLowerCase(), i = decodeURIComponent(e.url).replace(/\/{2,}/g, '/'), c = [], s = [];
-                    if (L.forEach(function (e) {
-                            c = c.concat(T(e, r, !1)), s = s.concat(T(e, a, !1));
-                        }), 0 < c.length || 0 < s.length) {
-                        var l = c.length + s.length;
-                        [c,s].forEach(function (e) {
-                            e.sort(function (e, t) {
-                                return t.position !== e.position ? t.position - e.position : e.word.length - t.word.length;
-                            });
-                        });
-                        var u = [];
-                        if (0 !== c.length) {
-                            var h = E(0, n.length, c, x);
-                            t += h.searchTextCountInSlice, u.push(h);
-                        }
-                        for (var d = []; 0 !== s.length;) {
-                            var p = s[s.length - 1], f = p.position, g = p.word, y = f - 20, v = f + 80;
-                            y < 0 && (y = 0), v < f + g.length && (v = f + g.length), v > o.length && (v = o.length);
-                            var m = E(y, v, s, x);
-                            t += m.searchTextCountInSlice, d.push(m);
-                        }
-                        d.sort(function (e, t) {
-                            return e.searchTextCount !== t.searchTextCount ? t.searchTextCount - e.searchTextCount : e.hits.length !== t.hits.length ? t.hits.length - e.hits.length : e.start - t.start;
-                        });
-                        var C = parseInt(CONFIG.localsearch.top_n_per_article, 10);
-                        0 <= C && (d = d.slice(0, C));
-                        var w = '';
-                        0 !== u.length ? w += '<li><a href="' + i + '" class="search-result-title">' + q(n, u[0]) + '</a>' : w += '<li><a href="' + i + '" class="search-result-title">' + n + '</a>', d.forEach(function (e) {
-                            w += '<a href="' + i + '"><p class="search-result">' + q(o, e) + '...</p></a>';
-                        }), w += '</li>', S.push({
-                            item: w,
-                            searchTextCount: t,
-                            hitCount: l,
-                            id: S.length
-                        });
-                    }
+
+        $input.on('input', function() {
+          // 0x03. parse query to keywords list
+          var content = $input.val();
+          var resultHTML = '';
+          var keywords = content.trim().toLowerCase().split(/[\s-]+/);
+          $result.html('');
+          if (content.trim().length <= 0) {
+            return $input.removeClass('invalid').removeClass('valid');
+          }
+          // 0x04. perform local searching
+          dataList.forEach(function(data) {
+            var isMatch = true;
+            if (!data.title || data.title.trim() === '') {
+              data.title = 'Untitled';
+            }
+            var orig_data_title = data.title.trim();
+            var data_title = orig_data_title.toLowerCase();
+            var orig_data_content = data.content.trim().replace(/<[^>]+>/g, '');
+            var data_content = orig_data_content.toLowerCase();
+            var data_url = data.url;
+            var index_title = -1;
+            var index_content = -1;
+            var first_occur = -1;
+            // only match articles with not empty contents
+            if (data_content !== '') {
+              keywords.forEach(function(keyword, i) {
+                index_title = data_title.indexOf(keyword);
+                index_content = data_content.indexOf(keyword);
+
+                if (index_title < 0 && index_content < 0) {
+                  isMatch = false;
+                } else {
+                  if (index_content < 0) {
+                    index_content = 0;
+                  }
+                  if (i === 0) {
+                    first_occur = index_content;
+                  }
+                  //content_index.push({index_content:index_content, keyword_len:keyword_len});
                 }
-            }), 1 === L.length && '' === L[0])
-            s.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>';
-        else if (0 === S.length)
-            s.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>';
-        else {
-            S.sort(function (e, t) {
-                return e.searchTextCount !== t.searchTextCount ? t.searchTextCount - e.searchTextCount : e.hitCount !== t.hitCount ? t.hitCount - e.hitCount : t.id - e.id;
-            });
-            var t = '<ul class="search-result-list">';
-            S.forEach(function (e) {
-                t += e.item;
-            }), t += '</ul>', s.innerHTML = t, window.pjax && window.pjax.refresh(s);
-        }
-    }
-    function a(t) {
-        fetch(i).then(function (e) {
-            return e.text();
-        }).then(function (e) {
-            n = !0, r = o ? [].concat(_toConsumableArray(new DOMParser().parseFromString(e, 'text/xml').querySelectorAll('entry'))).map(function (e) {
-                return {
-                    title: e.querySelector('title').innerHTML,
-                    content: e.querySelector('content').innerHTML,
-                    url: e.querySelector('url').innerHTML
-                };
-            }) : JSON.parse(e), document.querySelector('.search-pop-overlay').innerHTML = '', document.body.style.overflow = '', t && t();
+              });
+            } else {
+              isMatch = false;
+            }
+            // 0x05. show search results
+            if (isMatch) {
+              resultHTML += '<a href=\'' + data_url + '\' class=\'list-group-item list-group-item-action font-weight-bolder search-list-title\'>' + orig_data_title + '</a>';
+              var content = orig_data_content;
+              if (first_occur >= 0) {
+                // cut out 100 characters
+                var start = first_occur - 20;
+                var end = first_occur + 80;
+
+                if (start < 0) {
+                  start = 0;
+                }
+
+                if (start === 0) {
+                  end = 100;
+                }
+
+                if (end > content.length) {
+                  end = content.length;
+                }
+
+                var match_content = content.substring(start, end);
+
+                // highlight all keywords
+                keywords.forEach(function(keyword) {
+                  var regS = new RegExp(keyword, 'gi');
+                  match_content = match_content.replace(regS, '<span class="search-word">' + keyword + '</span>');
+                });
+
+                resultHTML += '<p class=\'search-list-content\'>' + match_content + '...</p>';
+              }
+            }
+          });
+          if (resultHTML.indexOf('list-group-item') === -1) {
+            return $input.addClass('invalid').removeClass('valid');
+          }
+          $input.addClass('valid').removeClass('invalid');
+          $result.html(resultHTML);
         });
-    }
-    var i = CONFIG.root + e, c = document.getElementById('search-input'), s = document.getElementById('search-result');
-    CONFIG.localsearch.preload && a();
-    function l() {
-        document.body.style.overflow = 'hidden', document.querySelector('.search-pop-overlay').style.display = 'block', document.querySelector('.popup').style.display = 'block', document.getElementById('search-input').focus();
-    }
-    'auto' === CONFIG.localsearch.trigger ? c.addEventListener('input', t) : (document.querySelector('.search-icon').addEventListener('click', t), c.addEventListener('keypress', function (e) {
-        13 === e.keyCode && t();
-    })), document.querySelector('.popup-trigger').addEventListener('click', function () {
-        !1 === n ? (document.querySelector('.search-pop-overlay').style.display = '', document.querySelector('.search-pop-overlay').innerHTML = '<div class="search-loading-icon"><i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i></div>', a(l)) : l();
+      }
     });
-    function u() {
-        document.body.style.overflow = '', document.querySelector('.search-pop-overlay').style.display = 'none', document.querySelector('.popup').style.display = 'none';
+  }
+
+  function localSearchReset(searchSelector, resultSelector) {
+    'use strict';
+    var $input = jQuery(searchSelector);
+    var $result = jQuery(resultSelector);
+
+    if ($input.length === 0) {
+      // eslint-disable-next-line no-console
+      throw Error('No element selected by the searchSelector');
     }
-    document.querySelector('.search-pop-overlay').addEventListener('click', u), document.querySelector('.popup-btn-close').addEventListener('click', u), window.addEventListener('pjax:success', u), window.addEventListener('keyup', function (e) {
-        27 === e.which && u();
-    });
-});
+    if ($result.length === 0) {
+      // eslint-disable-next-line no-console
+      throw Error('No element selected by the resultSelector');
+    }
+
+    $input.val('').removeClass('invalid').removeClass('valid');
+    $result.html('');
+  }
+
+  var modal = jQuery('#modalSearch');
+  var searchSelector = '#local-search-input';
+  var resultSelector = '#local-search-result';
+  modal.on('show.bs.modal', function() {
+    var path = CONFIG.search_path || '/local-search.xml';
+    localSearchFunc(path, searchSelector, resultSelector);
+  });
+  modal.on('shown.bs.modal', function() {
+    jQuery('#local-search-input').focus();
+  });
+  modal.on('hidden.bs.modal', function() {
+    localSearchReset(searchSelector, resultSelector);
+  });
+})();
