@@ -17,8 +17,7 @@ NexT.boot = {}, NexT.boot.registerEvents = function () {
                 e.classList.toggle('site-nav-on');
             }
         }) : e.classList.toggle('site-nav-on');
-    });
-    document.querySelectorAll('.sidebar-nav li').forEach(function (e, s) {
+    }), document.querySelectorAll('.sidebar-nav li').forEach(function (e, s) {
         e.addEventListener('click', function (e) {
             var t = e.currentTarget, i = 'sidebar-nav-active', o = 'sidebar-panel-active';
             if (!t.classList.contains(i)) {
