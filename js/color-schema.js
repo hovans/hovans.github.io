@@ -53,8 +53,7 @@
                 });
             }
         }(e), function (t) {
-            a.REMARK42 && a.REMARK42.changeTheme(t);
-            a.CUSDIS && a.CUSDIS.setTheme(t);
+            a.REMARK42 && a.REMARK42.changeTheme(t), a.CUSDIS && a.CUSDIS.setTheme(t);
             var e = o.querySelector('iframe');
             if (e) {
                 var r = a.UtterancesThemeLight;
@@ -71,28 +70,27 @@
         dark: 'light',
         light: 'dark'
     };
-    function y() {
-        var t = s(r);
-        if (g[t])
-            t = v[t];
-        else {
-            if (null !== t)
-                return;
-            var e = o.getElementById(l);
-            e && (t = e.getAttribute('data')), e && g[t] || (t = v[d()]);
-        }
-        return function (t, e) {
-            try {
-                localStorage.setItem(t, e);
-            } catch (t) {
-            }
-        }(r, t), t;
-    }
     h(), Fluid.utils.waitElementLoaded(u, function () {
         h();
         var t = o.getElementById(u);
         t && t.addEventListener('click', function () {
-            h(y());
+            h(function () {
+                var t = s(r);
+                if (g[t])
+                    t = v[t];
+                else {
+                    if (null !== t)
+                        return;
+                    var e = o.getElementById(l);
+                    e && (t = e.getAttribute('data')), e && g[t] || (t = v[d()]);
+                }
+                return function (t, e) {
+                    try {
+                        localStorage.setItem(t, e);
+                    } catch (t) {
+                    }
+                }(r, t), t;
+            }());
         });
     });
 }(window, document);
