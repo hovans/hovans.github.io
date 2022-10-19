@@ -72,12 +72,9 @@ window.requestAnimationFrame = window.requestAnimationFrame || window.webkitRequ
     },
     loadComments: function (e, t) {
         var n = document.querySelector('#comments[lazyload]');
-        if (n) {
-            Fluid.utils.waitElementVisible(e, function () {
-                t(), n.removeAttribute('lazyload');
-            }, CONFIG.lazyload.offset_factor);
-        } else
-            t();
+        n ? Fluid.utils.waitElementVisible(e, function () {
+            t(), n.removeAttribute('lazyload');
+        }, CONFIG.lazyload.offset_factor) : t();
     }
 }, Debouncer.prototype = {
     constructor: Debouncer,
