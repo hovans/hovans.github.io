@@ -85,23 +85,22 @@ HTMLElement.prototype.wrap = function (t) {
     },
     initCopyCode: function () {
         if ('ClipboardJS' in window) {
-            '</button>';
-            var t = jQuery('.markdown-body pre');
-            t.each(function () {
+            var e = jQuery('.markdown-body pre');
+            e.each(function () {
                 var t = jQuery(this);
                 0 < t.find('code.mermaid').length || 0 < t.find('span.line').length || t.append('<button class="copy-btn" data-clipboard-snippet=""><i class="iconfont icon-copy"></i><span>Copy</span></button>');
             });
-            var e = new window.ClipboardJS('.copy-btn', {
+            var t = new window.ClipboardJS('.copy-btn', {
                 target: function (t) {
                     return t.previousElementSibling;
                 }
             });
-            jQuery('.copy-btn').addClass(function (t) {
-                if (0 === t.length)
+            jQuery('.copy-btn').addClass(function () {
+                if (0 === e.length)
                     return 'copy-btn-dark';
-                var e = t.css('background-color').replace(/rgba*\(/, '').replace(')', '').split(',');
-                return 127.5 < 0.213 * e[0] + 0.715 * e[1] + 0.072 * e[2] ? 'copy-btn-dark' : 'copy-btn-light';
-            }(t)), e.on('success', function (t) {
+                var t = e.css('background-color').replace(/rgba*\(/, '').replace(')', '').split(',');
+                return 127.5 < 0.213 * t[0] + 0.715 * t[1] + 0.072 * t[2] ? 'copy-btn-dark' : 'copy-btn-light';
+            }()), t.on('success', function (t) {
                 t.clearSelection();
                 var e = t.trigger.outerHTML;
                 t.trigger.innerHTML = 'Success', setTimeout(function () {

@@ -14,17 +14,15 @@ HTMLElement.prototype.wrap = function (n) {
         var r = jQuery('#banner[parallax="true"]');
         if (0 !== r.length) {
             var e = jQuery('#board');
-            if (0 !== e.length) {
-                Fluid.utils.listenScroll(function () {
-                    var n = jQuery(window).scrollTop() / 5, o = 96 + parseInt(e.css('margin-top'), 0);
-                    o < n && (n = o), r.css({
-                        transform: 'translate3d(0,' + n + 'px,0)',
-                        '-webkit-transform': 'translate3d(0,' + n + 'px,0)',
-                        '-ms-transform': 'translate3d(0,' + n + 'px,0)',
-                        '-o-transform': 'translate3d(0,' + n + 'px,0)'
-                    }), jQuery('#toc') && jQuery('#toc-ctn').css({ 'padding-top': n + 'px' });
-                });
-            }
+            0 !== e.length && Fluid.utils.listenScroll(function () {
+                var n = jQuery(window).scrollTop() / 5, o = 96 + parseInt(e.css('margin-top'), 0);
+                o < n && (n = o), r.css({
+                    transform: 'translate3d(0,' + n + 'px,0)',
+                    '-webkit-transform': 'translate3d(0,' + n + 'px,0)',
+                    '-ms-transform': 'translate3d(0,' + n + 'px,0)',
+                    '-o-transform': 'translate3d(0,' + n + 'px,0)'
+                }), jQuery('#toc') && jQuery('#toc-ctn').css({ 'padding-top': n + 'px' });
+            });
         }
     },
     registerScrollDownArrowEvent: function () {
