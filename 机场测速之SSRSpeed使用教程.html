@@ -52,7 +52,7 @@ SSRSpeed测速支持ss/ssr/v2ray协议的单个节点，机场订阅，非常方
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"jichangtj.com","root":"/","version":"1.8.11","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":false,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":false,"loading_img":"/img/loading.webp","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":251717481,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"jichangtj.com","root":"/","version":"1.8.11","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":false,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.webp","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":251717481,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
   </script>
   <script src="/js/utils.js"></script>
   <script src="/js/color-schema.js"></script>
@@ -160,10 +160,10 @@ SSRSpeed测速支持ss/ssr/v2ray协议的单个节点，机场订阅，非常方
 <h4 id="5-测完后结果在result文件夹"><a href="#5-测完后结果在result文件夹" class="headerlink" title="5.测完后结果在result文件夹"></a>5.测完后结果在result文件夹</h4><p>或者输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python  web.py</span><br></pre></td></tr></table></figure></p>
 <p>然后浏览器打开：<br><a href="http://127.0.0.1:10870/" target="_blank" rel="noopener">http://127.0.0.1:10870/</a><br>然后就很简单了。</p>
 <p>结果<br>如图：<br>第一列一般是机场名字；<br>第二列是节点名称；<br>第三列是丢包比例；<br>第四列是到机器的ping情况，一般中转机场就是你到中转服务器时间；<br>第五列google ping,就是到谷歌服务器的时间了，越低越好。<br>第六列avgspeed，测速平均速度单位M/s，主要看这个，越大越好。<br>最后一列是最大速度。</p>
-<p><div align="center"><img src="/uploads/ssrspeed/5.webp" alt="avatar"></div></p>
+<p><div align="center"><img src="/uploads/ssrspeed/5.webp" srcset="/img/loading.webp" lazyload="" alt="avatar"></div></p>
 <h3 id="二、进阶配置"><a href="#二、进阶配置" class="headerlink" title="二、进阶配置"></a>二、进阶配置</h3><p>如果要测v2ray，默认是不支持的。<br>需要下载v2ray-core<br>下载地址:<a href="https://github.com/v2ray/v2ray-core/releases" target="_blank" rel="noopener">https://github.com/v2ray/v2ray-core/releases</a><br>win可下：v2ray-windows-64.zip 这个文件。</p>
 <p>把文件拷贝进去到clients文件夹里面的v2ray-core<br>结果如图所示:</p>
-<p><div align="center"><img src="/uploads/ssrspeed/2.webp" alt="avatar"></div></p>
+<p><div align="center"><img src="/uploads/ssrspeed/2.webp" srcset="/img/loading.webp" lazyload="" alt="avatar"></div></p>
 <p>如果输入订阅不行，可以通过使用本地ss配置文件。</p>
 <p>先把订阅导入<a href="https://github.com/shadowsocks/shadowsocks-windows/releases" target="_blank" rel="noopener">shadowsock-windows软件</a>中，更新订阅成功后，本地会有一个gui-config.json文件。然后去测速软件根目录输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python main.py -c gui-config.json</span><br></pre></td></tr></table></figure></p>
 <h3 id="官方文档："><a href="#官方文档：" class="headerlink" title="官方文档："></a>官方文档：</h3><p><a href="https://github.com/hwanz/github_NyanChanMeow_SSRSpeed/" target="_blank" rel="noopener">https://github.com/hwanz/github_NyanChanMeow_SSRSpeed/</a></p>
@@ -275,6 +275,10 @@ SSRSpeed测速支持ss/ssr/v2ray协议的单个节点，机场订阅，非常方
 
 <!-- Plugins -->
 
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
 
 
 
