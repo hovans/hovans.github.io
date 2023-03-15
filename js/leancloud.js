@@ -1,107 +1,181 @@
-'use strict';
-!function (p, h) {
-    function d(c, l) {
-        return new Promise(function (i, a) {
-            c('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ target: l }))).then(function (e) {
-                return e.json();
-            }).then(function (e) {
-                var t = e.results, n = e.code, o = e.error;
-                if (401 === n)
-                    throw o;
-                if (t && 0 < t.length) {
-                    var r = t[0];
-                    i(r);
-                } else
-                    c('post', '/classes/Counter', {
-                        target: l,
-                        time: 0
-                    }).then(function (e) {
-                        return e.json();
-                    }).then(function (e, t) {
-                        if (t)
-                            throw t;
-                        i(e);
-                    }).catch(function (e) {
-                        console.error('Failed to create', e), a(e);
-                    });
-            }).catch(function (e) {
-                console.error('LeanCloud Counter Error:', e), a(e);
-            });
-        });
-    }
-    function f(e) {
-        return {
-            method: 'PUT',
-            path: '/1.1/classes/Counter/' + e,
-            body: {
-                time: {
-                    __op: 'Increment',
-                    amount: 1
+/* global CONFIG */
+
+(function(window, document) {
+  // 查询存储的记录
+  function getRecord(Counter, target) {
+    return new Promise(function(resolve, reject) {
+      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ target })))
+        .then(resp => resp.json())
+        .then(({ results, code, error }) => {
+          if (code === 401) {
+            throw error;
+          }
+          if (results && results.length > 0) {
+            var record = results[0];
+            resolve(record);
+          } else {
+            Counter('post', '/classes/Counter', { target, time: 0 })
+              .then(resp => resp.json())
+              .then((record, error) => {
+                if (error) {
+                  throw error;
                 }
-            }
-        };
-    }
-    function e(t) {
-        var i = !0 === CONFIG.web_analytics.enable, e = [], a = [], n = h.querySelector('#leancloud-site-pv-container');
-        if (n) {
-            var o = d(t, 'site-pv').then(function (e) {
-                i && a.push(f(e.objectId));
-                var t = h.querySelector('#leancloud-site-pv');
-                t && (t.innerText = e.time + 1, n && (n.style.display = 'inline'));
-            });
-            e.push(o);
-        }
-        var c = h.querySelector('#leancloud-site-uv-container');
-        if (c) {
-            var r = d(t, 'site-uv').then(function (e) {
-                var t, n, o = (t = 'LeanCloud_UV_Flag', !((n = localStorage.getItem(t)) && new Date().getTime() - parseInt(n, 10) <= 86400000 || (localStorage.setItem(t, new Date().getTime().toString()), 0)));
-                o && i && a.push(f(e.objectId));
-                var r = h.querySelector('#leancloud-site-uv');
-                r && (r.innerText = e.time + (o ? 1 : 0), c && (c.style.display = 'inline'));
-            });
-            e.push(r);
-        }
-        var l = h.querySelector('#leancloud-page-views-container');
-        if (l) {
-            var s = decodeURI(p.location.pathname.replace(/(?<!\/)\/*(index.html)*$/, '/')), u = d(t, s).then(function (e) {
-                    if (i && a.push(f(e.objectId)), l) {
-                        var t = h.querySelector('#leancloud-page-views');
-                        t && (t.innerText = (e.time || 0) + 1, l.style.display = 'inline');
-                    }
-                });
-            e.push(u);
-        }
-        i && Promise.all(e).then(function () {
-            var e, o;
-            0 < a.length && (e = t, o = a, new Promise(function (t, n) {
-                e('post', '/batch', { requests: o }).then(function (e) {
-                    if ((e = e.json()).error)
-                        throw e.error;
-                    t(e);
-                }).catch(function (e) {
-                    console.error('Failed to save visitor count', e), n(e);
-                });
-            }));
+                resolve(record);
+              }).catch(error => {
+              // eslint-disable-next-line no-console
+                console.error('Failed to create', error);
+                reject(error);
+              });
+          }
+        }).catch((error) => {
+        // eslint-disable-next-line no-console
+          console.error('LeanCloud Counter Error:', error);
+          reject(error);
         });
-    }
-    var r = CONFIG.web_analytics.leancloud.app_id, i = CONFIG.web_analytics.leancloud.app_key, t = CONFIG.web_analytics.leancloud.server_url;
-    function n(o) {
-        e(function (e, t, n) {
-            return fetch(o + '/1.1' + t, {
-                method: e,
-                headers: {
-                    'X-LC-Id': r,
-                    'X-LC-Key': i,
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(n)
-            });
-        });
-    }
-    var o = '-MdYXbMMI' !== r.slice(-9) ? t : 'https://' + r.slice(0, 8).toLowerCase() + '.api.lncldglobal.com';
-    o ? n(o) : fetch('https://app-router.leancloud.cn/2/route?appId=' + r).then(function (e) {
-        return e.json();
-    }).then(function (e) {
-        e.api_server && n('https://' + e.api_server);
     });
-}(window, document);
+  }
+
+  // 发起自增请求
+  function increment(Counter, incrArr) {
+    return new Promise(function(resolve, reject) {
+      Counter('post', '/batch', {
+        'requests': incrArr
+      }).then((res) => {
+        res = res.json();
+        if (res.error) {
+          throw res.error;
+        }
+        resolve(res);
+      }).catch((error) => {
+        // eslint-disable-next-line no-console
+        console.error('Failed to save visitor count', error);
+        reject(error);
+      });
+    });
+  }
+
+  // 构建自增请求体
+  function buildIncrement(objectId) {
+    return {
+      'method': 'PUT',
+      'path'  : `/1.1/classes/Counter/${objectId}`,
+      'body'  : {
+        'time': {
+          '__op'  : 'Increment',
+          'amount': 1
+        }
+      }
+    };
+  }
+
+  // 校验是否为有效的 UV
+  function validUV() {
+    var key = 'LeanCloud_UV_Flag';
+    var flag = localStorage.getItem(key);
+    if (flag) {
+      // 距离标记小于 24 小时则不计为 UV
+      if (new Date().getTime() - parseInt(flag, 10) <= 86400000) {
+        return false;
+      }
+    }
+    localStorage.setItem(key, new Date().getTime().toString());
+    return true;
+  }
+
+  function addCount(Counter) {
+    var enableIncr = CONFIG.web_analytics.enable === true;
+    var getterArr = [];
+    var incrArr = [];
+
+    // 请求 PV 并自增
+    var pvCtn = document.querySelector('#leancloud-site-pv-container');
+    if (pvCtn) {
+      var pvGetter = getRecord(Counter, 'site-pv').then((record) => {
+        enableIncr && incrArr.push(buildIncrement(record.objectId));
+        var ele = document.querySelector('#leancloud-site-pv');
+        if (ele) {
+          ele.innerText = record.time + 1;
+          if (pvCtn) {
+            pvCtn.style.display = 'inline';
+          }
+        }
+      });
+      getterArr.push(pvGetter);
+    }
+
+    // 请求 UV 并自增
+    var uvCtn = document.querySelector('#leancloud-site-uv-container');
+    if (uvCtn) {
+      var uvGetter = getRecord(Counter, 'site-uv').then((record) => {
+        var vuv = validUV();
+        vuv && enableIncr && incrArr.push(buildIncrement(record.objectId));
+        var ele = document.querySelector('#leancloud-site-uv');
+        if (ele) {
+          ele.innerText = record.time + (vuv ? 1 : 0);
+          if (uvCtn) {
+            uvCtn.style.display = 'inline';
+          }
+        }
+      });
+      getterArr.push(uvGetter);
+    }
+
+    // 如果有页面浏览数节点，则请求浏览数并自增
+    var viewCtn = document.querySelector('#leancloud-page-views-container');
+    if (viewCtn) {
+      var target = decodeURI(window.location.pathname.replace(/(?<!\/)\/*(index.html)*$/, '/'));
+      var viewGetter = getRecord(Counter, target).then((record) => {
+        enableIncr && incrArr.push(buildIncrement(record.objectId));
+        if (viewCtn) {
+          var ele = document.querySelector('#leancloud-page-views');
+          if (ele) {
+            ele.innerText = (record.time || 0) + 1;
+            viewCtn.style.display = 'inline';
+          }
+        }
+      });
+      getterArr.push(viewGetter);
+    }
+
+    // 如果启动计数自增，批量发起自增请求
+    if (enableIncr) {
+      Promise.all(getterArr).then(() => {
+        incrArr.length > 0 && increment(Counter, incrArr);
+      });
+    }
+  }
+
+  var appId = CONFIG.web_analytics.leancloud.app_id;
+  var appKey = CONFIG.web_analytics.leancloud.app_key;
+  var serverUrl = CONFIG.web_analytics.leancloud.server_url;
+
+  function fetchData(api_server) {
+    var Counter = (method, url, data) => {
+      return fetch(`${api_server}/1.1${url}`, {
+        method,
+        headers: {
+          'X-LC-Id'     : appId,
+          'X-LC-Key'    : appKey,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+    };
+
+    addCount(Counter);
+  }
+
+  var apiServer = appId.slice(-9) !== '-MdYXbMMI' ? serverUrl : `https://${appId.slice(0, 8).toLowerCase()}.api.lncldglobal.com`;
+
+  if (apiServer) {
+    fetchData(apiServer);
+  } else {
+    fetch('https://app-router.leancloud.cn/2/route?appId=' + appId)
+      .then(resp => resp.json())
+      .then((data) => {
+        if (data.api_server) {
+          fetchData('https://' + data.api_server);
+        }
+      });
+  }
+})(window, document);
