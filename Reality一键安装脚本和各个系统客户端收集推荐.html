@@ -16,10 +16,10 @@
   
   <meta name="theme-color" content="#2f4154">
   <meta name="description" content="tag:Reality,一键安装脚本,自建翻墙
-Trojan特征也很明显，容易被识别，暂时推荐使用Reality自建翻墙代理。下面是一键安装脚本。
+Trojan特征也很明显，容易被识别，暂时推荐使用Reality自建翻墙代理。下面是一键安装脚本。后面有各个系统的客户端推荐。
 本人Telegram电报频道：科学上网观察与机场测速频道：掌握最新机场优惠折扣通知，最新机场推荐与机场评测，最新科学上网相关新闻与消息，欢迎关注。
 twitter科学上网与机场观察
-20家自用便宜稳定高速国外ssr-v2ray-trojan专线机场推荐">
+20家自用便宜稳定高速国外ssr-v2ra">
   <meta name="author" content="">
   <meta name="keywords" content="机场推荐">
   <meta name="msvalidate.01" content="D969DF6E598E54872694D826CCFE7410">
@@ -143,24 +143,29 @@ twitter科学上网与机场观察
             
               <p class="note note-info">
                 
-                  本文最后更新于：2023年5月14日 晚上
+                  本文最后更新于：2023年5月15日 晚上
                 
               </p>
             
             <div class="markdown-body">
               <p>tag:Reality,一键安装脚本,自建翻墙</p>
-<p>Trojan特征也很明显，容易被识别，暂时推荐使用Reality自建翻墙代理。下面是一键安装脚本。</p>
+<p>Trojan特征也很明显，容易被识别，暂时推荐使用Reality自建翻墙代理。下面是一键安装脚本。后面有各个系统的客户端推荐。</p>
 <p>本人Telegram电报频道：<a href="https://t.me/jichangtj" target="_blank" rel="noopener">科学上网观察与机场测速频道</a>：掌握最新机场优惠折扣通知，最新机场推荐与机场评测，最新科学上网相关新闻与消息，欢迎关注。</p>
 <p><a href="https://twitter.com/jichangtj" target="_blank" rel="noopener">twitter科学上网与机场观察</a></p>
 <p><a href="./ssr-v2ray专线机场推荐.html" target="_blank">20家自用便宜稳定高速国外ssr-v2ray-trojan专线机场推荐</a></p>
 <a id="more"></a> 
 <h2 id="Reality优点"><a href="#Reality优点" class="headerlink" title="Reality优点"></a>Reality优点</h2><ol>
-<li>特征不明显，和平时浏览网页一样。无TLS特征。因为之前TLS in TLS容易被识别。</li>
-<li>可指向别人的网站，不需要域名</li>
+<li>无TLS特征。仍有前向保密性等，且证书链攻击无效，安全性超越常规 TLS</li>
+<li>可指向别人的网站，不需要域名。配置 TLS 服务端，更方便，实现向中间人呈现指定 SNI 的全程真实 TLS</li>
 </ol>
+<p>禁止回国流量，并转发 TCP/80 和 UDP/443 等端口</p>
 <p><a href="https://github.com/XTLS/Xray-core/discussions/1295" target="_blank" rel="noopener">TLS in TLS问题</a></p>
 <p><a href="https://github.com/XTLS/Trojan-killer" target="_blank" rel="noopener">检测 TLS in TLS 的工具</a></p>
-<p>不过reality 也不一定完全安全，墙直接发威 ban整个ip段啥协议都没用。首先得ip干净。vultr这种很容易被墙。</p>
+<p>不过reality也不是完全安全，墙直接发威 ban整个ip段啥协议都没用。首先得ip干净，比如vultr，甲骨文，谷歌云等这种被重点关注的就很容易被墙。</p>
+<p><a href="https://github.com/XTLS/REALITY" target="_blank" rel="noopener">Xray REALITY 官方github地址</a></p>
+<h2 id="BBR"><a href="#BBR" class="headerlink" title="BBR"></a>BBR</h2><p>买的线路不好的话可以安装BBR加速。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh &amp;&amp; chmod +x bbr.sh &amp;&amp; ./bbr.sh</span><br></pre></td></tr></table></figure>
+<p>然后重启</p>
 <h2 id="一键脚本"><a href="#一键脚本" class="headerlink" title="一键脚本"></a>一键脚本</h2><p>mack-a大佬的八合一的一键脚本</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -P /root -N --no-check-certificate &quot;https://raw.githubusercontent.com/mack-a/v2ray-agent/master/install.sh&quot; &amp;&amp; chmod 700 /root/install.sh &amp;&amp; /root/install.sh</span><br></pre></td></tr></table></figure>
 <p>选择[5.REALITY管理] – 端口输入443–输入域名最低标准为：国外网站，支持 TLSv1.3 、H2–后面回车即可。</p>
@@ -172,7 +177,13 @@ twitter科学上网与机场观察
 <p>2）<a href="https://github.com/2dust/v2rayNG/releases" target="_blank" rel="noopener">v2rayNG</a> </p>
 <p>A V2Ray client for Android, support Xray core and v2fly core</p>
 <p>3) <a href="https://github.com/MatsuriDayo/NekoBoxForAndroid/releases" target="_blank" rel="noopener">NekoBoxForAndroid</a></p>
+<p>4) clash meta for magisk</p>
+<p><a href="https://t.me/db4cm" target="_blank" rel="noopener">Dashboard 更新发布｜引退</a></p>
+<p><a href="https://t.me/MagiskChangeKing" target="_blank" rel="noopener">我是魔改2大王</a></p>
+<p>适合想捣鼓的</p>
 <h3 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h3><p>1) <a href="https://github.com/2dust/v2rayN" target="_blank" rel="noopener">v2rayN</a></p>
+<p>Xray-Core需要1.8.0以上</p>
+<p>服务器–添加VLESS服务器</p>
 <p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" srcset="/img/loading.webp" lazyload="" data-original="/uploads/reality/xku26x-0.png" width="90%" align="center" alt="v2rayN客户端配置设置教程"></p>
 <p>2）<a href="https://github.com/2dust/clashN" target="_blank" rel="noopener">ClashN</a></p>
 <p>A clash client for Windows, supports Clash core and Clash.Meta core</p>
@@ -186,9 +197,9 @@ twitter科学上网与机场观察
 <p>ARM（M1、M2）：/Applications/Clash\ for\ Windows.app/Contents/Resources/static/files/darwin/arm64/</p>
 <p>3）Wings X</p>
 <p>4)<a href="https://github.com/tzmax/V2RayXS/releases" target="_blank" rel="noopener">V2RayXS</a> :GUI for xray-core on macOS</p>
-<p>5)<a href="https://github.com/MetaCubeX/ClashX.Meta" target="_blank" rel="noopener">ClashX.Met</a></p>
+<p>5)<a href="https://github.com/MetaCubeX/ClashX.Meta" target="_blank" rel="noopener">ClashX.Meta</a></p>
 <h3 id="IOS"><a href="#IOS" class="headerlink" title="IOS"></a>IOS</h3><p>1）<a href="https://apps.apple.com/app/wings-x/id6446119727" target="_blank" rel="noopener">Wings X</a></p>
-<p>2）<a href="https://t.me/meta_for_ios" target="_blank" rel="noopener">meta_for_ios</a></p>
+<p>2）<a href="https://t.me/meta_for_ios" target="_blank" rel="noopener">meta for ios</a></p>
 <p>3）<a href="https://sing-box.sagernet.org/installation/clients/sfi/" target="_blank" rel="noopener">sing-box</a></p>
 <p>4）Shadowrocket：tf版本</p>
 <h3 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h3><p>1）<a href="https://github.com/zzzgydi/clash-verge/releases" target="_blank" rel="noopener">Clash Verge</a></p>
@@ -203,8 +214,13 @@ twitter科学上网与机场观察
 <p><a href="https://t.me/merlinclashcat" target="_blank" rel="noopener">MerlinClash猫咪爬梯</a> :说明文档：<a href="https://mcreadme.gitbook.io/mc" target="_blank" rel="noopener">https://mcreadme.gitbook.io/mc</a></p>
 <p><a href="https://t.me/e58695/59" target="_blank" rel="noopener">e58695</a> : Clash 及其衍生版本均支持 TPROXY 透明代理</p>
 <p><a href="https://t.me/MagiskChangeKing/126" target="_blank" rel="noopener">MagiskChangeKing</a></p>
-<p><strong>博客来源：</strong><br><a href="https://www.v2ray-agent.com/archives/1679292836379" target="_blank" rel="noopener">https://www.v2ray-agent.com/archives/1679292836379</a></p>
+<h3 id="X-UI"><a href="#X-UI" class="headerlink" title="X-UI"></a>X-UI</h3><p>xui只是个可视化的配置工具，和一键脚本都差不多，本质还是用的xray</p>
+<p><a href="https://github.com/sing-web/x-ui" target="_blank" rel="noopener">https://github.com/sing-web/x-ui</a></p>
+<p><a href="https://github.com/MHSanaei/3x-ui" target="_blank" rel="noopener">https://github.com/MHSanaei/3x-ui</a></p>
+<p><a href="https://github.com/FranzKafkaYu/x-ui" target="_blank" rel="noopener">https://github.com/FranzKafkaYu/x-ui</a></p>
+<p><strong>博客来源：</strong></p>
 <p><a href="https://www.v2ray-agent.com/archives/1680104902581" target="_blank" rel="noopener">https://www.v2ray-agent.com/archives/1680104902581</a></p>
+<p>部分来源hostloc网友回复。</p>
 <h2 id="其它博客"><a href="#其它博客" class="headerlink" title="其它博客"></a>其它博客</h2><p><a href="./国外VPS主机推荐.html" target="_blank">适合翻墙建站国外VPS服务器主机推荐</a> ：适合自己梯子，或者建站VPS</p>
 <p><a href="./ssr-v2ray专线机场推荐.html" target="_blank">自用稳定高速国外ssr-v2ray-trojan付费专线机场推荐</a> </p>
 <p><a href="./telegram%E7%94%B5%E6%8A%A5%E9%A2%91%E9%81%93%E7%BE%A4%E7%BB%84%E6%8E%A8%E8%8D%90.html" target="_blank">Telegram频道推荐，新闻，NSFW开车等</a> </p>
