@@ -139,7 +139,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2023年6月22日 晚上
+                  本文最后更新于：2023年9月28日 晚上
                 
               </p>
             
@@ -154,7 +154,10 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">  &#123;</span><br><span class="line">    &quot;tag&quot;: &quot;IPv4_out&quot;,</span><br><span class="line">    &quot;protocol&quot;: &quot;freedom&quot;,</span><br><span class="line">    &quot;settings&quot;: &#123;&#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    &quot;tag&quot;: &quot;IPv6_out&quot;,</span><br><span class="line">    &quot;protocol&quot;: &quot;freedom&quot;,</span><br><span class="line">    &quot;settings&quot;: &#123;</span><br><span class="line">      &quot;domainStrategy&quot;: &quot;UseIPv6&quot;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    &quot;protocol&quot;: &quot;blackhole&quot;,</span><br><span class="line">    &quot;tag&quot;: &quot;block&quot;</span><br><span class="line">  &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
 <p>config.yml</p>
 <p>RouteConfigPath和OutboundConfigPath 后面的#号去除</p>
-
+<h2 id="其它规则"><a href="#其它规则" class="headerlink" title="其它规则"></a>其它规则</h2><p><a href="https://github.com/Rakau/blockList" target="_blank" rel="noopener">https://github.com/Rakau/blockList</a></p>
+<h3 id="Soga用法"><a href="#Soga用法" class="headerlink" title="Soga用法"></a>Soga用法</h3><p>以Root权限运行之后重启你的Soga<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://raw.githubusercontent.com/Rakau/blockList/main/blockList -O /etc/soga/blockList</span><br></pre></td></tr></table></figure></p>
+<h3 id="XrayR用法"><a href="#XrayR用法" class="headerlink" title="XrayR用法"></a>XrayR用法</h3><p>以Root权限运行之后，编辑/etc/XrayR/config.yml找到RuleListPath这一项，去掉#和无用语句后保存重启XrayR</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://raw.githubusercontent.com/Rakau/blockList/main/blockList -O /etc/XrayR/rulelis</span><br></pre></td></tr></table></figure>
             </div>
             <hr>
             <div>
@@ -174,6 +177,12 @@
                 <div class="post-prevnext">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/v2board对接soga审计.html">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">v2board对接soga规则审计</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">
