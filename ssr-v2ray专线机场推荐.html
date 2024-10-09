@@ -151,38 +151,41 @@
 <p><a href="https://sites.google.com/view/honven/%E9%A6%96%E9%A1%B5/%E6%9C%BA%E5%9C%BA%E6%8E%A8%E8%8D%90" target="_blank" rel="noopener">本博客备份地址,同步更新</a></p>
 <p><a href="https://github.com/hwanz/SSR-V2ray-Trojan/blob/main/README.md" target="_blank" rel="noopener">Github备份地址,同步更新,欢迎Star</a></p>
 <h2 id="说在前面的话"><a href="#说在前面的话" class="headerlink" title="说在前面的话"></a>说在前面的话</h2><ol>
-<li>总体线路质量：<strong>IEPL专线中转 &gt; 隧道公网中转 &gt; 直连。</strong> 专线主要是不过墙，延迟低，受出口绕路影响较少。速度日常更稳定，使用体验会好很多。电信用户不建议买直连<br>一分钱一分货，VPS和线路成本注定了稳定且快速还便宜是不可能三角，机场比的是钞能力，速度要看机场的总带宽大小。稳定要看机场的资源质量，主要是看机场主的上游的线路质量，解锁看的是机场主的落地/解锁商是否优秀。机场带宽大和稳定性最重要，中转机场线路都可以，尽量不买直连机场。</li>
+<li>总体线路质量：<strong>IEPL专线中转 &gt; 隧道公网中转 &gt; 直连。</strong> 专线主要是不过墙，延迟低，出海不绕路。速度日常更稳定，沿海地区使用体验会好很多。机场比的是钞能力，速度要看机场的剩余带宽多少。稳定要看机场的上游的质量，解锁看的是机场主的落地/解锁商是否优秀。机场带宽大和稳定性最重要。<br>一分钱一分货，</li>
 </ol>
-<p>每天都有人问有没便宜稳定快速的机场，看三色图：<br><img src="/uploads/vpn/0.webp" srcset="/img/loading.svg" lazyload="" width="40%" align="center" alt="三色图"></p>
+<p>每天都有人问有没便宜稳定快速的机场，VPS和线路成本注定了稳定且快速还便宜是不可能三角：<br><img src="/uploads/vpn/0.webp" srcset="/img/loading.svg" lazyload="" width="40%" align="center" alt="三色图"></p>
 <ol start="2">
-<li><p><strong>选机场，以跑路概率小为第一原则。尽量买开了比较久的大机场</strong>。大机场有钱买好的线路和加大带宽，买高防应对DDOS等。小机场可能是买的转发，转发稳定性欠佳，虽然便宜，可能没钱运营下去，随时跑路。可以先<strong>月付</strong>，谁也没办法保证机场不跑路。在Telegram太高调的也不好，容易被DDOS。</p>
+<li><p><strong>选机场，以跑路概率小为第一原则。尽量买开了比较久的大机场</strong>。大机场有钱买好的线路和加大带宽，买高防应对DDOS等。小机场可能是买的转发，转发稳定性欠佳，虽然便宜，可能没钱运营下去，随时跑路。可以先<strong>月付</strong>，谁也没办法保证机场不跑路。在Telegram太高调的也不好，容易被DDOS。我们也会尽量选跑路概率小的，因为机场跑路对我们伤害非常大。</p>
 </li>
 <li><p><strong>对中转机场而言，协议不是最重要的，中转的带宽大小和稳定性才是。</strong> SS/SSR/Vmess/Trojan都行，SS延迟相对较低，目前机场主流是使用ss。主要看你常用代理软件支持不支持。如果要自建直连线路,建议使用Reality和Hy2 <a href="./Reality一键安装脚本和各个系统客户端收集推荐.html" target="_blank">最新翻墙协议Reality自建教程</a>，不被GFW识别封ip。</p>
 </li>
 </ol>
 <p>需要选购自建翻墙代理的VPS主机可以看看这篇：<a href="./国外VPS主机推荐.html" target="_blank">适合建站与自建梯子国外VPS推荐</a>。</p>
 <ol start="4">
-<li><p>最好选中转机器多、入口多点的机场,中转机场一旦中转线路挂了就没办法转发流量到境外落地机了。近几年防火墙在每年两会、64、国庆、除夕都会干扰代理，反向墙国内中转服务器(国外机器无法传送回数据给墙内)、以及日常通报国内中转或者污染中转机的域名，以及日常总有机场被ddos。如果只有一条中转，容易一挂全挂。可以看拓扑结构上面的入口数目。国内中转机场只能中国内地使用（新疆除外）。</p>
+<li><p>最好选中转机器多、入口多点的机场,中转机场一旦中转线路挂了就没办法转发流量到境外落地机了。近几年防火墙在每年两会、64、国庆、除夕都会干扰代理，日常通报国内中转或者污染中转机的域名，以及日常总有机场被ddos。如果只有一条中转，容易一挂全挂。可以看拓扑结构上面的入口数目。国内中转机场只能中国内地使用（新疆除外）。</p>
 </li>
 <li><p><strong>备用很重要！没有一直稳定的机场</strong>。就算以稳出名的机场也有不稳的时候，比如被DDOS。买两个稳定的比买一堆垃圾好，可以买按量付费或者小流量套餐备用，最好不是相同线路，买了专线可以买公网中转的备用。</p>
 </li>
-<li><p><strong>便宜机场套路：</strong> 1)一开始很便宜或者搞超大折扣活动，AFF比例非常高。低价吸引一波来割韭菜，捞一波就跑。别看单价流量多就觉得值，不好用也是浪费钱。 2)使用便宜月抛线路，成本低。线路变化频繁，随时一键跑路。 3)线路多但复用，多条线路但入口和落地其实是同一条，一挂挂一片。看节点拓扑分析看簇那里，数字是几就是一个ip复用几次。总之，机场便宜不好用, 好用不便宜</p>
+<li><p><strong>便宜机场套路：</strong> 1)一开始很便宜或者搞超大折扣活动，AFF比例非常高。低价吸引一波来割韭菜，捞一波就跑。别看单价流量多就觉得值，不好用也是浪费钱。 2)买的机场中转转发线路。和多家机场公用入口。日常被ddos。 3)使用便宜月抛线路，成本低。线路变化频繁，随时一键跑路。 4)线路多但复用，多条线路但入口和落地其实是同一条，一挂挂一片。看节点拓扑分析看簇那里，数字是几就是一个ip复用几次。总之，机场便宜不好用, 好用不便宜</p>
 </li>
 <li><p>不建议用机场打游戏，建议用UU加速器等专业的。担心支付宝和微信付款有隐私问题的可以用USDT：<a href="./币安和欧易OKX使用教程.html" target="_blank">币安和欧易使用教程</a> 。虚拟币支付注意会有1U手续费，到账金额需要和显示的一样，币安和欧易会从转转账的金额里面扣1U。</p>
 </li>
-<li><p>各系统推荐客户端：Windows、Mac和安卓都首先推荐Clash系列的（比如FLClash/clash verge rev/clash for android），小白推荐使用hiddify。IOS首推小火箭、免费的就karing，基本所有协议都支持。具体：<a href="./proxyclient.html" target="_blank">Windows安卓Mac和ios代理客户端软件整理推荐和使用教程</a> 。 教程都一样的，。导入机场节点订阅后打开开关（系统代理）<br>需要租外区账号和下载或者购买APP:  可以到<a href="https://appleidbook.top" target="_blank" rel="noopener">果果商店</a> 购买。</p>
+<li><p>各系统推荐客户端：Windows、Mac和安卓都首先推荐Clash系列的（比如FLClash、clash verge rev、mihomo-party、clash for android），小白推荐使用hiddify。IOS首推小火箭、免费的就karing，基本所有协议都支持。具体：<a href="./proxyclient.html" target="_blank">Windows安卓Mac和ios代理客户端软件整理推荐和使用教程</a> 。 教程都一样的，。导入机场节点订阅后打开开关（系统代理）<br>需要租外区账号和下载或者购买APP:  可以到<a href="https://appleidbook.top" target="_blank" rel="noopener">果果商店</a> 购买。</p>
 </li>
 </ol>
-<p>9 太长不看版：<br>1) 想稳定，买放前面的，最好20块/月起的，暂时不稳的都放后面了<br>2) 想要便宜的，10块/月左右机场：贝贝云（32.9/季100G/月）、Flyingbird(15块/月100G)、EdNovas云(10块/每月50G)、大哥云(69/季200G/月)、芬达(12.8块/月88G)、翼游(10块/月50G)、海獭(8.99/月50G)<br>3) 有试用：Arisaka<br>4) 想要买不限制设备数目的：SpeedCAT、Kycloud、Flyingbird<br>5) 更多请看最后的总结部分</p>
-<ol start="10">
-<li>机场常见问题详细总结在这篇文章了：<a href="./机场使用常见问题.html" target="_blank">机场小白新手使用教程和常见问题，不会买机场的也可以看</a></li>
+<ol start="9">
+<li><p>太长不看版：<br>1) 想稳定，买放前面的，最好20块/月起的，暂时速度不够好的都放后面了<br>2) 想要便宜的，10块/月左右机场：贝贝云（32.9/季100G/月）、Flyingbird(15块/月100G)、EdNovas云(10块/每月50G)、大哥云(69/季200G/月)、芬达(12.8块/月88G)、翼游(10块/月50G)、海獭(8.99/月50G)<br>3) 有试用：Arisaka<br>4) 想要买不限制设备数目的：SpeedCAT、Kycloud、Flyingbird<br>5) 更多请看最后的总结部分</p>
+</li>
+<li><p>机场常见问题详细总结在这篇文章了：<a href="./机场使用常见问题.html" target="_blank">机场小白新手使用教程和常见问题，不会买机场的也可以看</a></p>
+</li>
 </ol>
-<p>不允许任何形式的转载和洗稿本文章。抄袭或洗稿司马。持续更新ing，欢迎收藏，方便选择。</p>
+<p>不允许任何形式的转载和洗稿本文章。抄袭或洗稿司马。日常持续更新ing，欢迎收藏，方便选择。</p>
 <p><img src="/uploads/vpn/1.webp" srcset="/img/loading.svg" lazyload="" width="90%" align="center" alt="机场线路图，图中可能有点问题但是整体是对的"></p>
 <p><strong>以下有几家值得推荐的shadowsocks(R)和V2ray、trojan订阅付费机场，都支持clash软件订阅的，下面的推荐的机场我也不能保证100%时候都好用，测速好看不一定好看，但是测速不行肯定不行。晚高峰测速可以看剩余带宽，白天测速可以看总带宽</strong></p>
-<p><a href="https://www.365tz96752.com/?r=ZAATYQ" target="_blank" rel="noopener">365VPN</a> ，免费使用，输入邀请码： ZAATYQ ，额外领取3天使用时间。如果机场打不开就先用这个打开。</p>
+<p>免费试用： <a href="https://www.365tz96752.com/?r=ZAATYQ" target="_blank" rel="noopener">365VPN</a> ，免费使用，输入邀请码： ZAATYQ ，额外领取3天使用时间。如果下面的机场官网打不开就先用这个打开。</p>
 <h2 id="一、BoostNet-39-月200G"><a href="#一、BoostNet-39-月200G" class="headerlink" title="一、BoostNet(39/月200G)"></a>一、BoostNet(39/月200G)</h2><p>广港+深港IEPL专线ss协议机场，双线路。小众精品机场。相对低调。人少，体验还不错,速度很快，稳定性不错。延迟较低。老板说是一线机场发展的。新人8折优惠券：boost</p>
 <p><a href="https://boostnet1.com/register?code=Pj4Wrfai" target="_blank" rel="noopener">BoostNet机场官网地址1</a>  </p>
+<p><a href="https://boostnet2.com/register?code=Pj4Wrfai" target="_blank" rel="noopener">BoostNet机场官网地址2</a>  </p>
 <p><a href="https://boostqz.com?path=register&amp;code=Pj4Wrfai" target="_blank" rel="noopener">BoostNet机场官网地址2</a>  </p>
 <blockquote>
 <p>开业时间：2024<br>老板肉身：墙外<br>入口与过境线路：广东入口，过境IEPL<br>节点数目： 30+<br>协议：Shadowsocks（不支持shadowsocksR软件）<br>UDP：支持<br>限制同时登录ip客户端数目：软性限制5个ip<br>ChatGPT/OpenAI解锁: 基本全解锁<br>流媒体：基本支持奈飞和迪士尼<br>墙外新闻网站屏蔽情况：屏蔽轮媒、rfa、pincong<br>tor:屏蔽<br>邮件传统协议smtp/pop3/imap：禁止(用各家邮箱官方APP和网页不影响)<br>地区：香港、台湾、新加坡、日本、美国、英国、马来西亚、土耳其、阿根廷<br>落地：Akari、Tanaka、PoloCloud、DigitalOcean、nexeon、Eons、Ipxo LLC、香港HGC<br>ipv6支持情况：香港、台湾、日本、美国部分节点支持<br>端口屏蔽：屏蔽22端口，1万以上端口<br>付款方式：支付宝、微信<br>TG频道：无<br>套餐是否包含手续费：是<br>只能中国内地使用：是<br>家宽：无<br>小白一键客户端：win+mac<br>面板:v2board，节点订阅在首页仪表盘【一键订阅】按钮中。提前用完流量续费可能不会重置流量。需购买重置流量包才重置流量。重置不增加时间。<br>客服：有<br><a href="./boostnet.html" target="_blank">BoostNet使用教程、拓扑结构、ChatGPT解锁和流媒体检测和历史测速结果合集</a></p>
@@ -310,7 +313,7 @@
 <p>特色：流媒体解锁和落地，有大量冷门节点，全球92+国家地区，各地家宽IP、原生ip。老板很认真挑选落地节点，基本都是原生(解锁各种流媒体)并且带宽大的才用，高质量的落地，各类型商宽与罕见的家宽，非常适合各类流媒体爱好者。机场主在香港。不买他家套餐，也推荐买140一年的流量包可做备用。也有海外站点。家宽适合拿来注册账号之类的，比如spotify解锁；使用ChatGPT、去墙内定位不同国家IP装逼等。还有Starlink（马斯克的星链）、国外蜂窝数据网络。</p>
 <p>154块/一年的很适合做备用或者是轻度使用用户。</p>
 <p>观察这家很多年了也，从测速记录也可以看得到，一直在升级线路，节点也越来越多，也是这机场的优点。TG里面也是很出名的存在，以节点多著名。TG机场圈子里面评价也很不错，大家常推荐的机场。如果被打了老板直接关机。</p>
-<p><a href="https://tagss05.pro/#/auth/AJCjBhsw" target="_blank" rel="noopener">TAG机场官网</a></p>
+<p><a href="https://tagss06.pro/#/auth/AJCjBhsw" target="_blank" rel="noopener">TAG机场官网</a></p>
 <blockquote>
 <p>开业时间：2018<br>老板肉身：香港(确定)<br>入口：上海、石家庄、广东<br>过境：IEPL<br>协议：Shadowsocks（不支持shadowsocksR软件）<br>UDP: 大多数支持Full Cone<br>客户端数目：10<br>ChatGPT解锁: 全解锁，除了香港基本可以<br>地区：100+个国家，260+条线路，节点国家与地区非常多。家宽地区为：香港、澳门、台湾、新加坡、日本、马来西亚、越南、加拿大、美国，有原生节点<br>落地：香港有G-Core商宽、HGC商宽、HKT家宽，日本有G-Core、Kirino、Kirin、Catixs、IDCF、Sonet索尼宽带、KDDI、软银家宽等，新加坡Kirino、M1家宽、Whiz家宽。美国10余个落地节点，不同商家，美国AT&amp;T家宽。加拿大BCE家宽，澳门CTM家宽，马来西亚有TM家宽、Maxis商宽，新西兰Vodafone家宽。节点后端负载均衡，精简了一点。<br>ipv6支持情况：这么多节点，肯定有很多支持的<br>墙外新闻网站屏蔽情况：屏蔽轮媒<br>tor:未屏蔽<br>SSH端口屏蔽：屏蔽高位10000-65535端口和22端口<br>邮件传统协议smtp/pop3/imap：禁止(用各家邮箱官方APP和网页不影响)<br>只能中国内地使用：否，他家有国际站，需要另外买国际站节点<br>TG频道和交流群：机场官网指导进入，关注人数1万+;TG群需要购买套餐才可进入<br>付款方式：支付宝、虚拟币<br>套餐是否包含手续费：是<br>专门客服：有<br>国外能否使用：否，他家有国际站，可以买他家国际站<br>面板:v2board<br>注意事项：提前用完流量直接续费/购买相同套餐不会马上重置流量。首页点【重置】付费重置，不增加时间。<br><a href="./tag测速整合.html" target="_blank">TAG使用教程、拓扑结构检测和流媒体、历史测速结果合集，可查看过去两年的高清测速图与用户评价</a></p>
 </blockquote>
@@ -565,58 +568,9 @@ Max | 1000G/月 |个人127.75/月；家庭153.25/月
 <details><br> <summary>测速图，点击展开</summary><br><img src="/uploads/vpn/kycloud.webp" srcset="/img/loading.svg" lazyload="" width="90%" align="center" alt="机场推荐之kycloud机场测速"><br></details>
 
 
-<!-- ## 七、Cyanmori(20/月160G-老板出车祸，节点暂时不可用)
-
-青森云，SS协议隧道中转机场，2G口大带宽独享物理机，中转是武汉移动。技术和客服是在香港。老板青森，一些机场主可能在油管看过他教搭建sspanel的视频。老板会在群里，维护比较勤奋，日常会自己测速。中转带宽大，白天和晚上速度都可以，落地没有复用，观察了下挺好。可以试用6小时。购买些套餐可以给共享奈飞账户，共享的奈飞账号同时使用的人多了可能会挤掉。
-
-[Cyanmori机场官网1](https://reurl.cc/gax4GX)
 
 
-[Cyanmori机场官网2](https://suo.st/zmRxFTq)
 
-[Cyanmori机场官网3](https://sub.cccc.gg/auth/register?code=Z2ljGK)
-
--老板出车祸，节点暂时不可用-20240806
-
->开业时间：2021
-入口 ：武汉
-过境: 公网隧道
-协议：Shadowsocks（不支持shadowsocksR软件）
-UDP：基本支持Full-Cone
-客户端数目：3-10个
-落地ip数量： 30+
-ChatGPT/OpenAI解锁/奈飞/迪士尼: 基本解锁
-墙外新闻网站屏蔽情况：轮媒
-SSH端口屏蔽：未屏蔽22端口
-节点国家与地区：香港、台湾、韩国、日本、新加坡、美国、英国、印度、德国、澳洲、迪拜
-ipv6支持情况：不支持
-落地：甲骨文、DMIT、G-core、misaka等
-TG频道和群组：有，群人数3000+
-付款方式：支付宝、微信支付
-套餐价格是否包含手续费：包含
-只能中国内地使用：是
-试用：6小时
-面板:sspanel
-注意事项：提前用完流量直接续费/购买相同套餐不会马上重置流量。购买流量包才可，流量叠加包在您套餐流量重置时会一起清零。
-<a href="./cyanmori青森云机场怎么样.html" target="_blank">使用教程、拓扑结构、ChatGPT解锁和流媒体检测和历史测速结果合集</a>
-
-** 套餐(所有套餐节点一样): **
-
-套餐 |  流量 | 价格  | 设备数 
-:-:  | :-: | :-:   | :-:  
-A | 160G/月 | 20/月| 3
-A+ | 480G/季 | 54季 | 3
-B | 370G/月 | 30/月  | 5  
-B+ | 1110G/季 | 81/季  | 5
-C | 810G/年 | 50/月 | 10  
-C+ | 2430G/年 | 135/季 | 10  
-Plan A | 160G/月 | 85/季度  | 无限设备
-
-<details>
- <summary>测速图，点击展开</summary>
-<img src="/uploads/vpn/cyanmori.webp" srcset="/img/loading.svg" lazyload  width = "90%"  align=center  alt="机场推荐之cyanmori机场测速" />
-</details>
- -->
 <h2 id="七、海獭-25-季50G"><a href="#七、海獭-25-季50G" class="headerlink" title="七、海獭(25/季50G)"></a>七、海獭(25/季50G)</h2><p>trojan协议专线，奈飞和迪士尼、chatgpt都有解锁。中转带宽很大。不限制客户端数目。广东使用的话香港延迟很低。85折优惠码：pN02HX5n</p>
 <p>中转带宽很大，大部分用户家里打开最大可能就1G也足够了</p>
 <p><a href="https://honven20.haitacdn.com/register?aff=VQq8ZO5j" target="_blank" rel="noopener">Haita机场官网地址</a></p>
@@ -698,12 +652,9 @@ Plan A | 160G/月 | 85/季度  | 无限设备
 <details><br> <summary>测速图，点击展开</summary><br><img src="/uploads/vpn/stc.webp" srcset="/img/loading.svg" lazyload="" width="90%" align="center" alt="机场推荐之stc机场测速"><br></details>
 
 
-<h2 id="十、XX-AI（16-9-月100G"><a href="#十、XX-AI（16-9-月100G" class="headerlink" title="十、XX-AI（16.9/月100G)"></a>十、XX-AI（16.9/月100G)</h2><p>移动电信联通三线广港IEPL专线+沪日IEPL专线。总带宽6G，带宽剩余足够。<br>SS协议<br>2024.02开业<br>老板在国外<br>屏蔽审计：基本无<br>官网：<a href="https://bit.ly/3TEVWqE" target="_blank" rel="noopener">https://bit.ly/3TEVWqE</a></p>
-<p>这家好的一点是把四条不同入口的线路都展示出来了，这样可以保证大部分时间都是有入口可用。<br>官网主题好看，给人眼前一亮的感觉。<br>他家有落地直连【Direct部分】也在高级套餐展示出来了，境外用户可以使用。<br><a href="./xxai.html" target="_blank">xxai机场拓扑结构、流媒体和历史测速结果合集</a></p>
-<p><strong>套餐，年付6-7折 </strong>：<br>Basic:100G，16.9/月，3设备，25个节点，无直连和冷门节点<br>Standard:300G，39.9/月，6设备，61个节点<br>Premium:1000G， 99.9/月，不限设备，61个节</p>
-<details><br> <summary>测速图，点击展开</summary><br><img src="/uploads/vpn/xxai.webp" srcset="/img/loading.svg" lazyload="" width="90%" align="center" alt="机场推荐之xx-ai机场测速"><br></details>
 
-<h2 id="十一、万达云-14-月150G"><a href="#十一、万达云-14-月150G" class="headerlink" title="十一、万达云(14/月150G)"></a>十一、万达云(14/月150G)</h2><p>广东移动4G带宽公网中转机场，有条高倍率的IEPL线路。晚高峰测速带宽剩余足够。有按量付费的一次性永久流量套餐。如果需要按量的可以看看这家。这家机场的老板应该不少机场老板认识。官网：<a href="https://www.z1z1.top/vip" target="_blank" rel="noopener">https://www.z1z1.top/vip</a></p>
+
+<h2 id="十、万达云-14-月150G"><a href="#十、万达云-14-月150G" class="headerlink" title="十、万达云(14/月150G)"></a>十、万达云(14/月150G)</h2><p>广东移动4G带宽公网中转机场，有条高倍率的IEPL线路。晚高峰测速带宽剩余足够。有按量付费的一次性永久流量套餐。如果需要按量的可以看看这家。这家机场的老板应该不少机场老板认识。官网：<a href="https://www.z1z1.top/vip" target="_blank" rel="noopener">https://www.z1z1.top/vip</a></p>
 <blockquote>
 <p>老板肉身：新加坡<br>开业时长：2023.11之前<br>过境：公网隧道<br>协议：SS<br>UDP：支持<br>落地ip数量： 70左右<br>节点国家与地区：日本、新加坡、台湾、韩国、越南、印度、德国、迪拜、瑞典、马来西亚、英国、法国、意大利、土耳其、孟加拉、南极、朝鲜、哈萨克斯坦、菲律宾、泰国、卢森堡。（接下来的有家宽：）香港、美国、印尼、柬埔寨、荷兰、德国。<br>墙外新闻网站屏蔽情况：基本无<br>SSH端口屏蔽：未屏蔽22端口<br>邮件传统协议smtp/pop3/imap：禁止<br>TG电报频道：有<br>付款方式：支付宝+微信<br>只能中国内地使用：否，有全球入口，大陆外用户可用<br>面板:v2board<br><a href="./wanda.html" target="_blank">万达云拓扑结构、流媒体、ChatGPT解锁和历史测速结果合集</a></p>
 </blockquote>
@@ -713,7 +664,7 @@ Plan A | 160G/月 | 85/季度  | 无限设备
 
 
 
-<h2 id="十二、龙猫云-15-月100G"><a href="#十二、龙猫云-15-月100G" class="headerlink" title="十二、龙猫云(15/月100G)"></a>十二、龙猫云(15/月100G)</h2><p>totorocloud，中转机场。观察挺久，感觉速度都挺好。观察了很久才推荐的。值得推荐。而且也退出了TG宣传。更加稳定。</p>
+<h2 id="十一、龙猫云-15-月100G"><a href="#十一、龙猫云-15-月100G" class="headerlink" title="十一、龙猫云(15/月100G)"></a>十一、龙猫云(15/月100G)</h2><p>totorocloud，中转机场。观察挺久，感觉速度都挺好。观察了很久才推荐的。值得推荐。而且也退出了TG宣传。更加稳定。</p>
 <p>注意：speedcat、龙猫云、Flyingbird、一云梯是相同线路类型。别买重复了。</p>
 <p><a href="https://jichangtj01.lmvipaff.com/#/register?code=Qb502cPh" target="_blank" rel="noopener">龙猫云机场官网地址</a></p>
 <blockquote>
@@ -727,7 +678,7 @@ Plan A | 160G/月 | 85/季度  | 无限设备
 
 
 
-<h2 id="十三、Flyingbird-15-月100G"><a href="#十三、Flyingbird-15-月100G" class="headerlink" title="十三、Flyingbird(15/月100G)"></a>十三、Flyingbird(15/月100G)</h2><p>中转SS机场。过境口子5G带宽。几个月前(23年年初)就关注到的机场。近期使用感觉可以。专属优惠码： jichangtj (全场产品首次购买9折优惠)。评价褒贬不一，这个好不好用可以先买一个月试试看。不同用户评价不一样。流媒体解锁可以。不过日常有活动的。</p>
+<h2 id="十二、Flyingbird-15-月100G"><a href="#十二、Flyingbird-15-月100G" class="headerlink" title="十二、Flyingbird(15/月100G)"></a>十二、Flyingbird(15/月100G)</h2><p>中转SS机场。过境口子5G带宽。几个月前(23年年初)就关注到的机场。近期使用感觉可以。专属优惠码： jichangtj (全场产品首次购买9折优惠)。评价褒贬不一，这个好不好用可以先买一个月试试看。不同用户评价不一样。流媒体解锁可以。不过日常有活动的。</p>
 <p>注意：speedcat、龙猫云、Flyingbird应该是相同线路类型。别买重复了。</p>
 <p><a href="https://fba02.fbva-ho0.cc/auth/register?code=f34i" target="_blank" rel="noopener">Flyingbird机场官网</a></p>
 <blockquote>
@@ -743,7 +694,7 @@ Plan A | 160G/月 | 85/季度  | 无限设备
 
 
 <p>一云梯、飞鸟和龙猫云、一云梯这四家相同线路当作一家看就好了。不要买重复了</p>
-<h2 id="十四、大哥云-88-年"><a href="#十四、大哥云-88-年" class="headerlink" title="十四、大哥云(88/年)"></a>十四、大哥云(88/年)</h2><p>3年老机场了。Vmess+Trojan中转线路机场。机场主在东南亚，不用担心跑路。注册可以试用，试用没问题再买。稳定还是稳定的.在我监督下 ，更换了机器，测速好看了。单条2G带宽起。</p>
+<h2 id="十三、大哥云-88-年"><a href="#十三、大哥云-88-年" class="headerlink" title="十三、大哥云(88/年)"></a>十三、大哥云(88/年)</h2><p>3年老机场了。Vmess+Trojan中转线路机场。机场主在东南亚，不用担心跑路。注册可以试用，试用没问题再买。稳定还是稳定的.在我监督下 ，更换了机器，测速好看了。单条2G带宽起。</p>
 <p><a href="https://honven20.dgywzc.com/#/register?code=lEHKtVDi" target="_blank" rel="noopener">大哥云机场官网链接</a> </p>
 <blockquote>
 <p>开业时间：2020<br>老板肉身：东南亚<br>过境：公网中转<br>协议：Vmess+Trojan<br>UDP：支持<br>付款方式：支付宝、微信<br>一键客户端：有，Windows+Android<br>TG频道和群组：无<br>节点数目：46<br>落地：日本、香港、韩国、新加坡、菲律宾、泰国、菲律宾、越南、美国、台湾、英国、印度<br>试用：有, 一天10G<br>客户端数目：不限制<br>ChatGPT/OpenAI解锁: 除了香港<br>墙外新闻网站屏蔽情况：基本未屏蔽<br>SSH端口屏蔽：22端口未屏蔽<br>邮件传统协议smtp/pop3/imap：未禁止<br>ipv6支持情况：香港、日本、台湾、新加坡、印度<br>注意事项：提前用完流量直接续费/购买相同套餐不会马上重置流量。首页点【重置】付费重置；节点订阅在首页仪表盘【一键订阅】按钮中<br>支持客户端：不支持ssr，支持clash系列、v2rayN、v2raNG、surfoard、小火箭shadowrocket、quanmultX、loon、stash、surge、sing-box、hiddify、nekoray、nekobox等<br><a href="./大哥云历史测速结果整合.html" target="_blank">大哥云历史测速</a></p>
@@ -756,7 +707,7 @@ Plan A | 160G/月 | 85/季度  | 无限设备
 
 
 
-<h2 id="十五、Arisaka-16-月80G"><a href="#十五、Arisaka-16-月80G" class="headerlink" title="十五、Arisaka(16/月80G)"></a>十五、Arisaka(16/月80G)</h2><p>大带宽专线+隧道ss协议机场<br>南部是深圳入口全走专线；东部1倍率走隧道，3倍率走专线。15.99/月80G起，价格还行；注册可试用10G。8折优惠：UwtJ9Ov1<br><a href="https://reurl.cc/XG68o7" target="_blank" rel="noopener">Arisaka官网1</a><br><a href="https://arisaka.io/#/register?code=eYgRRmM3" target="_blank" rel="noopener">Arisaka官网2</a></p>
+<h2 id="十四、Arisaka-16-月80G"><a href="#十四、Arisaka-16-月80G" class="headerlink" title="十四、Arisaka(16/月80G)"></a>十四、Arisaka(16/月80G)</h2><p>大带宽专线+隧道ss协议机场<br>南部是深圳入口全走专线；东部1倍率走隧道，3倍率走专线。15.99/月80G起，价格还行；注册可试用10G。8折优惠：UwtJ9Ov1<br><a href="https://reurl.cc/XG68o7" target="_blank" rel="noopener">Arisaka官网1</a><br><a href="https://arisaka.io/#/register?code=eYgRRmM3" target="_blank" rel="noopener">Arisaka官网2</a></p>
 <blockquote>
 <p>地区：香港、新加坡、日本、德国、美国、台湾、韩国<br>22端口：未屏蔽<br>屏蔽网站：主要是轮媒和品葱<br>优点:带宽大，目前最大晚上能跑到600+M/s。<br>邮件传统协议smtp/pop3/imap：禁止<br>TG频道和群：无<br>入口：多个<br>面板:v2board，节点订阅在首页仪表盘【一键订阅】按钮中。提前用完流量续费可能不会重置流量。需购买重置流量包才重置流量。重置不增加时间。<br><a href="./arisaka.html" target="_blank">arisaka机场历史测速结果整合</a></p>
 </blockquote>
@@ -775,11 +726,11 @@ Plan A | 160G/月 | 85/季度  | 无限设备
 
 
 
-<h2 id="十六、疾风-9-99-月50G"><a href="#十六、疾风-9-99-月50G" class="headerlink" title="十六、疾风(9.99/月50G)"></a>十六、疾风(9.99/月50G)</h2><p>中转vmess协议机场。老板在国外，多家机场，这个机场是老板最上心的。不用担心跑路。多个入口。不同等级线路不一样。v5到v1，数字越小线路越多，速度越大。建议v3起。当然v1也不差。</p>
+<h2 id="十五、疾风-9-99-月50G"><a href="#十五、疾风-9-99-月50G" class="headerlink" title="十五、疾风(9.99/月50G)"></a>十五、疾风(9.99/月50G)</h2><p>中转vmess协议机场。老板在国外，多家机场，这个机场是老板最上心的。不用担心跑路。多个入口。不同等级线路不一样。v5到v1，数字越小线路越多，速度越大。建议v3起。当然v1也不差。</p>
 <p>优点：不用担心跑路。 缺点：部分节点有复用。</p>
 <p><a href="https://jfcat.net/auth/register?code=nvzC" target="_blank" rel="noopener">疾风机场官网</a> </p>
 <blockquote>
-<p>老板肉身：东南亚<br>开业时长：老板很多机场<br>入口ip数：4（最高套餐所有节点的）<br>过境：公网中转<br>协议：Vmess<br>落地ip数量： 32+<br>ChatGPT/OpenAI解锁: 基本解锁<br>节点国家与地区：香港、日本、新加坡、美国、台湾、韩国、马来西亚<br>墙外新闻网站屏蔽情况：基本未屏蔽<br>SSH端口屏蔽：未屏蔽22端口<br>邮件传统协议smtp/pop3/imap：未禁止<br>TG电报频道： 无<br>付款方式：支付宝+微信<br>只能中国内地使用：是<br>面板:sspanel</p>
+<p>老板肉身：东南亚<br>开业时长：老板很多机场<br>入口ip数：4（最高套餐所有节点的）<br>过境：公网中转<br>协议：Vmess<br>落地ip数量： 32+<br>ChatGPT/OpenAI解锁: 基本解锁<br>节点国家与地区：香港、日本、新加坡、美国、台湾、韩国、马来西亚<br>墙外新闻网站屏蔽情况：基本未屏蔽<br>SSH端口屏蔽：未屏蔽22端口<br>邮件传统协议smtp/pop3/imap：未禁止<br>TG电报频道： 无<br>付款方式：支付宝+微信<br>只能中国内地使用：是<br>面板:sspanel<br><a href="./jifeng.html" target="_blank">拓扑结构、流媒体和历史测速结果合集</a></p>
 </blockquote>
 <p><strong> 套餐: </strong></p>
 <table>
@@ -841,6 +792,12 @@ Plan A | 160G/月 | 85/季度  | 无限设备
 <details><br> <summary>测速图，点击展开</summary><br><img src="/uploads/vpn/jifeng.webp" srcset="/img/loading.svg" lazyload="" width="90%" align="center" alt="机场推荐之疾风机场测速"><br></details>
 
 
+<h2 id="十六、XX-AI（16-9-月100G"><a href="#十六、XX-AI（16-9-月100G" class="headerlink" title="十六、XX-AI（16.9/月100G)"></a>十六、XX-AI（16.9/月100G)</h2><p>移动电信联通三线广港IEPL专线+沪日IEPL专线。总带宽6G，带宽剩余足够。<br>SS协议<br>2024.02开业<br>老板在国外<br>屏蔽审计：基本无</p>
+<p><a href="https://reurl.cc/Dlp6vE" target="_blank" rel="noopener">XX-AI机场官网</a></p>
+<p><a href="https://bit.ly/3TEVWqE" target="_blank" rel="noopener">XX-AI机场官网</a></p>
+<p>这家好的一点是把四条不同入口的线路都展示出来了，这样可以保证大部分时间都是有入口可用。<br>官网主题好看，给人眼前一亮的感觉。<br>他家有落地直连【Direct部分】也在高级套餐展示出来了，境外用户可以使用。<br><a href="./xxai.html" target="_blank">xxai机场拓扑结构、流媒体和历史测速结果合集</a></p>
+<p><strong>套餐，年付6-7折 </strong>：<br>Basic:100G，16.9/月，3设备，25个节点，无直连和冷门节点<br>Standard:300G，39.9/月，6设备，61个节点<br>Premium:1000G， 99.9/月，不限设备，61个节</p>
+<details><br> <summary>测速图，点击展开</summary><br><img src="/uploads/vpn/xxai.webp" srcset="/img/loading.svg" lazyload="" width="90%" align="center" alt="机场推荐之xx-ai机场测速"><br></details>
 
 <h2 id="十七、Catnet-25-月100G"><a href="#十七、Catnet-25-月100G" class="headerlink" title="十七、Catnet(25/月100G)"></a>十七、Catnet(25/月100G)</h2><p>ss协议，入口是镇江移动，过境深港专线。速度不错。 之前更换了老板，接手的老板手上应该不少机场，新老板台湾人。看了下近期测速，支棱起来了又。</p>
 <p><a href="https://suo.st/4aMdzcZ" target="_blank" rel="noopener">Catnet机场官网链接1</a>  </p>
