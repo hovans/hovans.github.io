@@ -1,15 +1,10 @@
-User-agent: *
-Allow: /
-Allow: /archives/
-Allow: /categories/
-Allow: /tags/ 
-Allow: /resources/ 
-Disallow: /vendors/
-Disallow: /js/
+User-agent: *  
+Disallow: /js/  
 Disallow: /css/
-Disallow: /fonts/
-Disallow: /vendors/
-Disallow: /fancybox/
+Disallow: /img/  
+Disallow: /archives/
+Disallow: /page/  
+Disallow: /tags/
+Disallow: /uploads/
+Disallow: /about/
 
-Sitemap: http://honven.xyz/sitemap.xml
-Sitemap: http://honven.xyz/baidusitemap.xml
