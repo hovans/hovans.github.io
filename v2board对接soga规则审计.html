@@ -1,305 +1,46 @@
-
-
-<!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
-
-
-
-<head><meta name="generator" content="Hexo 3.9.0">
-  <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.webp">
-  <link rel="icon" href="/img/favicon.webp">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-  
-  <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="机场推荐,免费机场,机场订阅,翻墙机场,机场评测">
-  <meta name="author" content="">
-  <meta name="keywords" content="机场推荐">
-  <meta name="msvalidate.01" content="D969DF6E598E54872694D826CCFE7410">
-  <meta name="google-site-verification" content="1EX7gj8VBVryN3nR2kM41mxWdNI8LlZLOjuVShEuxlQ">
-  <meta name="google-site-verification" content="K1cVPs016csstQNtHU4QCBv9cXz6CrSiOgNJOM3DB1k">
-  <meta name="google-site-verification" content="f_mtWO7yBzw-TNFbHuDAyDpV5zpZY0LMCK4cgDokyRE">
-  
-  <title>v2board对接soga规则审计 - 机场推荐与机场评测</title>
-
-  <link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/bootstrap/4.6.0/css/bootstrap.min.css">
-
-
-  <link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/github-markdown-css/4.0.0/github-markdown.min.css">
-  <link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/hint.css/2.6.0/hint.min.css">
-
-  
-
-  
-    <link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/fancybox/3.5.7/jquery.fancybox.min.css">
-  
-
-
-
-<!-- 主题依赖的图标库，不要自行修改 -->
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
-
-<link rel="stylesheet" href="/css/main.css">
-
-<!-- 自定义样式保持在最底部 -->
-
-
-  <script id="fluid-configs">
-    var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"jichangtuijian.com","root":"/","version":"1.8.11","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":false,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.svg","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":251717481,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
-  </script>
-  <script src="/js/utils.js"></script>
-  <script src="/js/color-schema.js"></script>
-</head>
-
-
-<body>
-  <header style="height: 70vh;">
-    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand"
-       href="/">&nbsp;<strong>SSR-V2ray机场推荐</strong>&nbsp;</a>
-
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
-
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
-        
-        <!-- 
-        
-          <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self">&nbsp;<i
-                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
-          </li>
-         -->
-      </ul>
-    </div>
-  </div>
-</nav>
-
-    <div class="banner" id="banner" parallax=true
-         style="background: url('/img/default.webp') no-repeat center center;
-           background-size: cover;">
-      <div class="full-bg-img">
-        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-          <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="v2board对接soga规则审计">
-              
-                v2board对接soga规则审计
-              
-            </span>
-
-            
-              <div class="mt-3">
-  
-  
-</div>
-
-<div class="mt-1">
-  
-
-  
-
-  
-  
-</div>
-
-            
-          </div>
-
-          
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    
-      
-
-<div class="container-fluid nopadding-x">
-  <div class="row nomargin-x">
-    <div class="d-none d-lg-block col-lg-2"></div>
-    <div class="col-lg-8 nopadding-x-md">
-      <div class="container nopadding-x-md" id="board-ctn">
-        <div class="py-5" id="board">
-          <article class="post-content mx-auto">
-            <!-- SEO header -->
-            <h1 style="display: none">v2board对接soga规则审计</h1>
-            
-              <p class="note note-info">
-                
-                  本文最后更新于：2023年9月28日 晚上
-                
-              </p>
-            
-            <div class="markdown-body">
-              <p>从群里薅下来的</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">regexp:(api|ps|sv|offnavi|newvector|ulog.imap|newloc)(.map|).(baidu|n.shifen).com</span><br><span class="line">regexp:(.*.)(^360|0360|1360|3600|360safe|qhimg|qhmsg|^yun­pan|qi­hoo|qhcdn|qhup­date|360­to­talse­cu­rity|360shouji|qi­hucdn|360kan|secmp).(cn|com|net)</span><br><span class="line">regexp:(Subject|HELO|SMTP)</span><br><span class="line">regexp:(torrent|.torrent|peer_id=|info_hash|get_peers|find_node|BitTorrent|announce_peer|announce.php?passkey=)</span><br><span class="line">regexp:(^.@)(guerrillamail|guerrillamailblock|sharklasers|grr|pokemail|spam4|bccto|chacuo|027168).(info|biz|com|de|net|org|me|la)</span><br><span class="line">regexp:(.?)(xunlei|sandai|Thunder|XLLiveUD)(.)</span><br><span class="line">regexp:(..||)(dafahao|mingjinglive|botanwang|minghui|dongtaiwang|falunaz|epochtimes|ntdtv|falundafa|falungong|wujieliulan|zhengjian).(org|com|net)</span><br><span class="line">regexp:(ed2k|.torrent|peer_id=|announce|info_hash|get_peers|find_node|BitTorrent|announce_peer|announce.php?passkey=|magnet:|xunlei|sandai|Thunder|XLLiveUD|bt_key)</span><br><span class="line">regexp:(.+.|^)(360|speedtest|fast).(cn|com|net)</span><br><span class="line">regexp:(.*.||)(guanjia.qq.com|qqpcmgr|QQPCMGR)</span><br><span class="line">regexp:(.*.||)(rising|kingsoft|duba|xindubawukong|jinshanduba).(com|net|org)</span><br><span class="line">regexp:(.*.||)(netvigator|torproject).(com|cn|net|org)</span><br><span class="line">regexp:(..||)(visa|mycard|mastercard|gash|beanfun).</span><br><span class="line">regexp:(.*.||)(gov|12377|12315|talk.news.pts.org|creaders|zhuichaguoji|efcc.org|cyberpolice|aboluowang|tuidang|epochtimes|110.qq|mingjingnews|newhighlandvision|inmediahk|xinsheng|breakgfw|chengmingmag|jinpianwang|qi-gong|mhradio|edoors|renminbao|soundofhope|xizang-zhiye|bannedbook|ntdtv|12321|secretchina|dajiyuan|boxun|dwnews|huaglad|oneplusnews|epochweekly|cn.rfi).(cn|com|org|net|club|net|fr|tw|hk|eu|info|me)</span><br><span class="line">regexp:(.*.||)(miaozhen|cnzz|talkingdata|umeng).(cn|com)</span><br><span class="line">regexp:(.*.||)(mycard).(com|tw)</span><br><span class="line">regexp:(.*.||)(gash).(com|tw)</span><br><span class="line">regexp:(.*.||)(pincong).(rocks)</span><br><span class="line">regexp:(.*.||)(taobao).(com)</span><br><span class="line">regexp:(.*.)(tcbox|wappass|tieba|nsclick|sofire|gips0|afd|als|hmma|info|bgg|mbd|afdconf|).(tuisong|baidu|bdstatic).(cn|com|net)</span><br><span class="line">regexp:(.+.|^)(zhuanzhuan|pinduoduo|kskwai|kwaizt|gifshow|kuaishouzt|kwimgs|yximgs|ksapisrv|kuaishou|autonavi|xfinfr).(cn|com|net)</span><br><span class="line">regexp:(.+.|^)(zhihu).(com)</span><br><span class="line">regexp:(.*.)(xiaohongshu|xhscdn).(cn|com|net)</span><br><span class="line">regexp:(.*.)(weibo|sinaimg).(cn|com|net)</span><br><span class="line">regexp:(.+.|^)(amemv|ecombdapi|toutiao|baike|zijieapi|douyinpic|bytedance|pstatp|bdurlsnssdk|awemueughun|oceanengine|douyinstatic).(cn|com|net)</span><br><span class="line">regexp:(eth|asia|eth-eu|eth-us|cn|eth-backup|eth-na|stratum-etheth-eu1|eth-eu2).(antpool|sparkpool|f2pool|nanopool).(org|com)</span><br><span class="line">regexp:(.*.)(gash).(com|tw)</span><br><span class="line">regexp:.*gov.cn</span><br><span class="line">regexp:.*go.kr.*</span><br><span class="line">regexp:(.*.)(cyberpolice|12377|110|12389|jubao|8221110|cctv|81|12388|isc|12339|js12377).(org|com|net|cn|gov)</span><br><span class="line">regexp:(.*.)(ipaddress|whatismyipaddress|iplocation|ip138).(org|com|net|my|to|co)</span><br><span class="line">regexp:(.*.)(metatrader4|metatrader5|mql5).(org|com|net)</span><br><span class="line">regexp:(.+.|^)(whatismyip|whatismyipaddress|ipip|iplocation|myip|whatismybrowser).(cn|com|net|com|network)</span><br><span class="line">regexp:(.*.)(adsafe).(com)</span><br><span class="line">regexp:(.*.)(64tianwang|beijingspring|boxun|broadpressinc|chengmingmag|chenpokong|chinaaffairs|chinesepen|dalailamaworld|dalianmeng|erabaru|fgmtv|hrichina|huanghuagang|hxwq|jiangweiping|lagranepoca|lantosfoundation|minzhuzhongguo|ned|ninecommentaries|ogate|rfa|shenyun|shenyunperformingarts|shenzhoufilm|tiantibooks|tibetpost|truthmoviegroup.wixsite|uhrp|uyghuramerican|voachinese|vot|weijingsheng|xizang-zhiye).(org|com|net)</span><br><span class="line">regexp:(.*.)(speed).(io)</span><br><span class="line">regexp:(.*.)(weixin|qq|weixin110|weibo|zhihu|toutiao|bytedance|zijieapi|xiaohongshu|xhscdn|umengcloud|fengkongcloud|cpatrk|ctobsnssdk|shuzilm|soulapp|immomo|momocdn|douyinvod|douyin).(cn|com|net)</span><br><span class="line">regexp:(.*.)(antpool|foundrydigital|f2pool|viabtc|mining-dutch|solopool|hiveon|minergate|comining|give-me-coins|arsmine|baikalmine|litecoinpoo|clona|btc|slushpool|pandaminer|beepool|maxhash|coinminerz|bwpool|poolin|uupool|miningcore|multipools|minexmr|sbicrypto|marathondh|emcd|luxor|sigmapool|okkong|hpt|minerium|ckpool|mmpool|hashcity|uutest|huobipool|sparkpool|qkl123|webkaka|2miners|51szzc|666pool|91pool|atticpool|anomp|aapool|antpool|ash-shanghai.globalpool|asia.zcoin.miningpoolhub|blackpool|blockmasters|btchd|bitminter|bitcoin|bhdpool|bginpoolbaimin|bi-chi|bohemianpool|bixin|bwpool|btcguild|batpool|bw|btcc|btc|bitfury|bitclubnetwork|beepool|coinhive|chainpool|connectbtc|cybtc|canoepool|cryptograben|cryptonotepool|coinotron|dashcoinpool|dxpool|dwarfpool|dpool|dmpools|everstake|epool|ethpool|ethfans|easy2mine|ethermine|extremepool|firepool|fir|fkpool|flypool|f3pool|gridcash|gath3r|grin-pool|grinmint|gbminers|get.bi-chi|globalpool|give-me-ltc|honeyminer|honestmining|hashquark|hashrabbit|hummerpool|hdpool|h-pool|hashvault|hpool|huobipool|haopool|pool.btc).(com|cn|net|org|io|im|cc|pro|top|one|co|info)</span><br><span class="line">regexp:(.*\.)(onedrive)\.(cn|com|org|net|club|net|fr|tw|hk|eu|info|me|io)</span><br><span class="line">regexp:(.*.)(netvi­ga­tor|tor­pro­ject).(cn|com|net|org)</span><br></pre></td></tr></table></figure>
-<h2 id="其它规则"><a href="#其它规则" class="headerlink" title="其它规则"></a>其它规则</h2><p><a href="https://github.com/Rakau/blockList" target="_blank" rel="noopener">https://github.com/Rakau/blockList</a></p>
-<h3 id="Soga用法"><a href="#Soga用法" class="headerlink" title="Soga用法"></a>Soga用法</h3><p>以Root权限运行之后重启你的Soga<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://raw.githubusercontent.com/Rakau/blockList/main/blockList -O /etc/soga/blockList</span><br></pre></td></tr></table></figure></p>
-<h3 id="XrayR用法"><a href="#XrayR用法" class="headerlink" title="XrayR用法"></a>XrayR用法</h3><p>以Root权限运行之后，编辑/etc/XrayR/config.yml找到RuleListPath这一项，去掉#和无用语句后保存重启XrayR</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://raw.githubusercontent.com/Rakau/blockList/main/blockList -O /etc/XrayR/rulelis</span><br></pre></td></tr></table></figure>
-            </div>
-            <hr>
-            <div>
-              <div class="post-metas mb-3">
-                
-                
-                  <div class="post-meta">
-                    <i class="iconfont icon-tags"></i>
-                    
-                      <a class="hover-with-bg" href="/tags/审计/">审计</a>
-                    
-                  </div>
-                
-              </div>
-              
-              
-                <div class="post-prevnext">
-                  <article class="post-prev col-6">
-                    
-                    
-                      <a href="/kuromi.html">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">kuromi库洛米机场怎么样</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
-                  </article>
-                  <article class="post-next col-6">
-                    
-                    
-                      <a href="/xrayr审计和禁止bt和端口.html">
-                        <span class="hidden-mobile">XrayR审计规则禁止BT禁止端口和网站等</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </article>
-                </div>
-              
-            </div>
-
-            
-          </article>
-        </div>
-      </div>
-    </div>
-    
-      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
-        <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
-  <div class="toc-body" id="toc-body"></div>
-</div>
-
-      </div>
-    
-  </div>
-</div>
-
-<!-- Custom -->
-
-
-    
-
-    
-      <a id="scroll-top-button" href="#" role="button">
-        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-      </a>
-    
-
-    
-
-    
-  </main>
-
-  <footer class="text-center mt-5 py-3">
-  <div class="footer-content">
-     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
-  </div>
-  
-
-  
-
-  
-</footer>
-
-
-  <!-- SCRIPTS -->
-  
-  <script  src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/nprogress/0.2.0/nprogress.min.js" ></script>
-  <link  rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/nprogress/0.2.0/nprogress.min.css" />
-
-  <script>
-    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
-    NProgress.start()
-    window.addEventListener('load', function() {
-      NProgress.done();
-    })
-  </script>
-
-
-<script  src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/jquery/3.6.0/jquery.min.js" ></script>
-<script  src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/bootstrap/4.6.0/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
-
-<!-- Plugins -->
-
-
-  
-    <script  src="/js/img-lazyload.js" ></script>
-  
-
-
-
-
-
-  <script  src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/tocbot/4.12.3/tocbot.min.js" ></script>
-
-
-
-  <script  src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 主题的启动项 保持在最底部 -->
-<script  src="/js/boot.js" ></script>
-
-
-</body>
-</html>
+<!DOCTYPE html><html lang="zh-CN" data-default-color-scheme="auto"><head><meta charset="UTF-8"><link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.webp"><link rel="icon" href="/img/favicon.webp"><link rel="canonical" href="https://jichangtuijian.com/v2board对接soga规则审计.html"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5,shrink-to-fit=no"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"><meta name="theme-color" content="#2f4154"><meta name="author" content=""><meta name="keywords" content="机场推荐"><meta name="description" content="从群里薅下来的 regexp:(api|ps|sv|offnavi|newvector|ulog.imap|newloc)(.map|).(baidu|n.shifen).com regexp:(.*.)(^360|0360|1360|3600|360safe|qhimg|qhmsg|^yun­pan|qi­hoo|qhcdn|qhup­date|360­to­talse­cu­rity|360s"><meta property="og:type" content="article"><meta property="og:title" content="v2board对接soga规则审计"><meta property="og:url" content="https://jichangtuijian.com/v2board%E5%AF%B9%E6%8E%A5soga%E8%A7%84%E5%88%99%E5%AE%A1%E8%AE%A1.html"><meta property="og:site_name" content="机场推荐与机场评测"><meta property="og:description" content="从群里薅下来的 regexp:(api|ps|sv|offnavi|newvector|ulog.imap|newloc)(.map|).(baidu|n.shifen).com regexp:(.*.)(^360|0360|1360|3600|360safe|qhimg|qhmsg|^yun­pan|qi­hoo|qhcdn|qhup­date|360­to­talse­cu­rity|360s"><meta property="og:locale" content="zh_CN"><meta property="article:published_time" content="2023-06-21T12:00:25.930Z"><meta property="article:modified_time" content="2024-10-22T13:00:19.220Z"><meta property="article:tag" content="审计"><meta name="twitter:card" content="summary_large_image"><title>v2board对接soga规则审计 - 机场推荐与机场评测</title><link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/bootstrap/4.6.0/css/bootstrap.min.css"><link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/github-markdown-css/4.0.0/github-markdown.min.css"><link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/hint.css/2.6.0/hint.min.css"><link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/fancybox/3.5.7/jquery.fancybox.min.css"><link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css"><link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css"><link rel="stylesheet" href="/css/main.css"><script id="fluid-configs">var Fluid=window.Fluid||{};Fluid.ctx=Object.assign({},Fluid.ctx);var CONFIG={hostname:"jichangtuijian.com",root:"/",version:"1.9.8",typing:{enable:!1,typeSpeed:70,cursorChar:"_",loop:!1,scope:[]},anchorjs:{enable:!1,element:"h1,h2,h3,h4,h5,h6",placement:"left",visible:"hover",icon:""},progressbar:{enable:!0,height_px:3,color:"#29d",options:{showSpinner:!1,trickleSpeed:100}},code_language:{enable:!0,default:"TEXT"},copy_btn:!1,image_caption:{enable:!0},image_zoom:{enable:!0,img_url_replace:["",""]},toc:{enable:!0,placement:"right",headingSelector:"h1,h2,h3,h4,h5,h6",collapseDepth:0},lazyload:{enable:!0,loading_img:"/img/loading.svg",onlypost:!1,offset_factor:2},web_analytics:{enable:!1,follow_dnt:!0,baidu:null,google:{measurement_id:null},tencent:{sid:null,cid:null},leancloud:{app_id:null,app_key:null,server_url:null,path:"window.location.pathname",ignore_local:!1},umami:{src:null,website_id:null,domains:null,start_time:"2024-01-01T00:00:00.000Z",token:null,api_server:null}},search_path:"/local-search.xml",include_content_in_search:!0};if(CONFIG.web_analytics.follow_dnt){var dntVal=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack;Fluid.ctx.dnt=dntVal&&(dntVal.startsWith("1")||dntVal.startsWith("yes")||dntVal.startsWith("on"))}</script><script src="/js/utils.js"></script><script src="/js/color-schema.js"></script><meta name="generator" content="Hexo 7.0.0"></head><body><header><div class="header-inner" style="height:70vh"><nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar"><div class="container"><a class="navbar-brand" href="/"><strong>机场推荐</strong> </a><button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><div class="animated-icon"><span></span><span></span><span></span></div></button><div class="collapse navbar-collapse" id="navbarSupportedContent"><ul class="navbar-nav ml-auto text-center"><li class="nav-item"><a class="nav-link" href="/" target="_self"><i class="iconfont icon-home-fill"></i> <span>首页</span></a></li><li class="nav-item"><a class="nav-link" href="/archives/" target="_self"><i class="iconfont icon-archive-fill"></i> <span>归档</span></a></li><li class="nav-item" id="color-toggle-btn"><a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle"><i class="iconfont icon-dark" id="color-toggle-icon"></i></a></li></ul></div></div></nav><div id="banner" class="banner" parallax="true" style="background:url(/img/default.webp) no-repeat center center;background-size:cover"><div class="full-bg-img"><div class="mask flex-center" style="background-color:rgba(0,0,0,.3)"><div class="banner-text text-center fade-in-up"><div class="h2"><span id="subtitle">v2board对接soga规则审计</span></div><div class="mt-3"></div><div class="mt-1"></div></div></div></div></div></div></header><main><div class="container-fluid nopadding-x"><div class="row nomargin-x"><div class="side-col d-none d-lg-block col-lg-2"></div><div class="col-lg-8 nopadding-x-md"><div class="container nopadding-x-md" id="board-ctn"><div id="board"><article class="post-content mx-auto"><h1 id="seo-header">v2board对接soga规则审计</h1><p id="updated-time" class="note note-info">本文最后更新于 2024年10月22日 晚上</p><div class="markdown-body"><p>从群里薅下来的</p><pre><code class="``">regexp:(api|ps|sv|offnavi|newvector|ulog.imap|newloc)(.map|).(baidu|n.shifen).com
+regexp:(.*.)(^360|0360|1360|3600|360safe|qhimg|qhmsg|^yun­pan|qi­hoo|qhcdn|qhup­date|360­to­talse­cu­rity|360shouji|qi­hucdn|360kan|secmp).(cn|com|net)
+regexp:(Subject|HELO|SMTP)
+regexp:(torrent|.torrent|peer_id=|info_hash|get_peers|find_node|BitTorrent|announce_peer|announce.php?passkey=)
+regexp:(^.@)(guerrillamail|guerrillamailblock|sharklasers|grr|pokemail|spam4|bccto|chacuo|027168).(info|biz|com|de|net|org|me|la)
+regexp:(.?)(xunlei|sandai|Thunder|XLLiveUD)(.)
+regexp:(..||)(dafahao|mingjinglive|botanwang|minghui|dongtaiwang|falunaz|epochtimes|ntdtv|falundafa|falungong|wujieliulan|zhengjian).(org|com|net)
+regexp:(ed2k|.torrent|peer_id=|announce|info_hash|get_peers|find_node|BitTorrent|announce_peer|announce.php?passkey=|magnet:|xunlei|sandai|Thunder|XLLiveUD|bt_key)
+regexp:(.+.|^)(360|speedtest|fast).(cn|com|net)
+regexp:(.*.||)(guanjia.qq.com|qqpcmgr|QQPCMGR)
+regexp:(.*.||)(rising|kingsoft|duba|xindubawukong|jinshanduba).(com|net|org)
+regexp:(.*.||)(netvigator|torproject).(com|cn|net|org)
+regexp:(..||)(visa|mycard|mastercard|gash|beanfun).
+regexp:(.*.||)(gov|12377|12315|talk.news.pts.org|creaders|zhuichaguoji|efcc.org|cyberpolice|aboluowang|tuidang|epochtimes|110.qq|mingjingnews|newhighlandvision|inmediahk|xinsheng|breakgfw|chengmingmag|jinpianwang|qi-gong|mhradio|edoors|renminbao|soundofhope|xizang-zhiye|bannedbook|ntdtv|12321|secretchina|dajiyuan|boxun|dwnews|huaglad|oneplusnews|epochweekly|cn.rfi).(cn|com|org|net|club|net|fr|tw|hk|eu|info|me)
+regexp:(.*.||)(miaozhen|cnzz|talkingdata|umeng).(cn|com)
+regexp:(.*.||)(mycard).(com|tw)
+regexp:(.*.||)(gash).(com|tw)
+regexp:(.*.||)(pincong).(rocks)
+regexp:(.*.||)(taobao).(com)
+regexp:(.*.)(tcbox|wappass|tieba|nsclick|sofire|gips0|afd|als|hmma|info|bgg|mbd|afdconf|).(tuisong|baidu|bdstatic).(cn|com|net)
+regexp:(.+.|^)(zhuanzhuan|pinduoduo|kskwai|kwaizt|gifshow|kuaishouzt|kwimgs|yximgs|ksapisrv|kuaishou|autonavi|xfinfr).(cn|com|net)
+regexp:(.+.|^)(zhihu).(com)
+regexp:(.*.)(xiaohongshu|xhscdn).(cn|com|net)
+regexp:(.*.)(weibo|sinaimg).(cn|com|net)
+regexp:(.+.|^)(amemv|ecombdapi|toutiao|baike|zijieapi|douyinpic|bytedance|pstatp|bdurlsnssdk|awemueughun|oceanengine|douyinstatic).(cn|com|net)
+regexp:(eth|asia|eth-eu|eth-us|cn|eth-backup|eth-na|stratum-etheth-eu1|eth-eu2).(antpool|sparkpool|f2pool|nanopool).(org|com)
+regexp:(.*.)(gash).(com|tw)
+regexp:.*gov.cn
+regexp:.*go.kr.*
+regexp:(.*.)(cyberpolice|12377|110|12389|jubao|8221110|cctv|81|12388|isc|12339|js12377).(org|com|net|cn|gov)
+regexp:(.*.)(ipaddress|whatismyipaddress|iplocation|ip138).(org|com|net|my|to|co)
+regexp:(.*.)(metatrader4|metatrader5|mql5).(org|com|net)
+regexp:(.+.|^)(whatismyip|whatismyipaddress|ipip|iplocation|myip|whatismybrowser).(cn|com|net|com|network)
+regexp:(.*.)(adsafe).(com)
+regexp:(.*.)(64tianwang|beijingspring|boxun|broadpressinc|chengmingmag|chenpokong|chinaaffairs|chinesepen|dalailamaworld|dalianmeng|erabaru|fgmtv|hrichina|huanghuagang|hxwq|jiangweiping|lagranepoca|lantosfoundation|minzhuzhongguo|ned|ninecommentaries|ogate|rfa|shenyun|shenyunperformingarts|shenzhoufilm|tiantibooks|tibetpost|truthmoviegroup.wixsite|uhrp|uyghuramerican|voachinese|vot|weijingsheng|xizang-zhiye).(org|com|net)
+regexp:(.*.)(speed).(io)
+regexp:(.*.)(weixin|qq|weixin110|weibo|zhihu|toutiao|bytedance|zijieapi|xiaohongshu|xhscdn|umengcloud|fengkongcloud|cpatrk|ctobsnssdk|shuzilm|soulapp|immomo|momocdn|douyinvod|douyin).(cn|com|net)
+regexp:(.*.)(antpool|foundrydigital|f2pool|viabtc|mining-dutch|solopool|hiveon|minergate|comining|give-me-coins|arsmine|baikalmine|litecoinpoo|clona|btc|slushpool|pandaminer|beepool|maxhash|coinminerz|bwpool|poolin|uupool|miningcore|multipools|minexmr|sbicrypto|marathondh|emcd|luxor|sigmapool|okkong|hpt|minerium|ckpool|mmpool|hashcity|uutest|huobipool|sparkpool|qkl123|webkaka|2miners|51szzc|666pool|91pool|atticpool|anomp|aapool|antpool|ash-shanghai.globalpool|asia.zcoin.miningpoolhub|blackpool|blockmasters|btchd|bitminter|bitcoin|bhdpool|bginpoolbaimin|bi-chi|bohemianpool|bixin|bwpool|btcguild|batpool|bw|btcc|btc|bitfury|bitclubnetwork|beepool|coinhive|chainpool|connectbtc|cybtc|canoepool|cryptograben|cryptonotepool|coinotron|dashcoinpool|dxpool|dwarfpool|dpool|dmpools|everstake|epool|ethpool|ethfans|easy2mine|ethermine|extremepool|firepool|fir|fkpool|flypool|f3pool|gridcash|gath3r|grin-pool|grinmint|gbminers|get.bi-chi|globalpool|give-me-ltc|honeyminer|honestmining|hashquark|hashrabbit|hummerpool|hdpool|h-pool|hashvault|hpool|huobipool|haopool|pool.btc).(com|cn|net|org|io|im|cc|pro|top|one|co|info)
+regexp:(.*\.)(onedrive)\.(cn|com|org|net|club|net|fr|tw|hk|eu|info|me|io)
+regexp:(.*.)(netvi­ga­tor|tor­pro­ject).(cn|com|net|org)
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 其它规则</span><br><span class="line">https://github.com/Rakau/blockList</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### Soga用法</span><br><span class="line"></span><br><span class="line">以Root权限运行之后重启你的Soga</span><br></pre></td></tr></table></figure>
+wget https://raw.githubusercontent.com/Rakau/blockList/main/blockList -O /etc/soga/blockList
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">### XrayR用法</span><br><span class="line"></span><br><span class="line">以Root权限运行之后，编辑/etc/XrayR/config.yml找到RuleListPath这一项，去掉#和无用语句后保存重启XrayR</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+wget https://raw.githubusercontent.com/Rakau/blockList/main/blockList -O /etc/XrayR/rulelis
+</code></pre></div><hr><div><div class="post-metas my-3"><div class="post-meta"><i class="iconfont icon-tags"></i> <a href="/tags/%E5%AE%A1%E8%AE%A1/" class="print-no-link">#审计</a></div></div><div class="post-prevnext my-3"><article class="post-prev col-6"><a href="/kuromi.html" title="kuromi库洛米机场怎么样"><i class="iconfont icon-arrowleft"></i> <span class="hidden-mobile">kuromi库洛米机场怎么样</span> <span class="visible-mobile">上一篇</span></a></article><article class="post-next col-6"><a href="/xrayr%E5%AE%A1%E8%AE%A1%E5%92%8C%E7%A6%81%E6%AD%A2bt%E5%92%8C%E7%AB%AF%E5%8F%A3.html" title="XrayR审计规则禁止BT禁止端口和网站等"><span class="hidden-mobile">XrayR审计规则禁止BT禁止端口和网站等</span> <span class="visible-mobile">下一篇</span> <i class="iconfont icon-arrowright"></i></a></article></div></div></article></div></div></div><div class="side-col d-none d-lg-block col-lg-2"><aside class="sidebar" style="margin-left:-1rem"><div id="toc"><p class="toc-header"><i class="iconfont icon-list"></i> <span>目录</span></p><div class="toc-body" id="toc-body"></div></div></aside></div></div></div><a id="scroll-top-button" aria-label="TOP" href="#" role="button"><i class="iconfont icon-arrowup" aria-hidden="true"></i></a></main><footer><div class="footer-inner"><div class="footer-content"><a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a></div></div></footer><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/nprogress/0.2.0/nprogress.min.js"></script><link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/nprogress/0.2.0/nprogress.min.css"><script>NProgress.configure({showSpinner:!1,trickleSpeed:100}),NProgress.start(),window.addEventListener("load",(function(){NProgress.done()}))</script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/jquery/3.6.0/jquery.min.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/bootstrap/4.6.0/js/bootstrap.min.js"></script><script src="/js/events.js"></script><script src="/js/plugins.js"></script><script src="/js/img-lazyload.js"></script><script>Fluid.utils.createScript("https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/tocbot/4.12.3/tocbot.min.js",(function(){var t=jQuery("#toc");if(0!==t.length&&window.tocbot){var o=jQuery("#board-ctn").offset().top;window.tocbot.init(Object.assign({tocSelector:"#toc-body",contentSelector:".markdown-body",linkClass:"tocbot-link",activeLinkClass:"tocbot-active-link",listClass:"tocbot-list",isCollapsedClass:"tocbot-is-collapsed",collapsibleClass:"tocbot-is-collapsible",scrollSmooth:!0,includeTitleTags:!0,headingsOffset:-o},CONFIG.toc)),t.find(".toc-list-item").length>0&&t.css("visibility","visible"),Fluid.events.registerRefreshCallback((function(){if("tocbot"in window){tocbot.refresh();var t=jQuery("#toc");if(0===t.length||!tocbot)return;t.find(".toc-list-item").length>0&&t.css("visibility","visible")}}))}}))</script><script>Fluid.plugins.codeWidget()</script><script>Fluid.utils.createScript("https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/fancybox/3.5.7/jquery.fancybox.min.js",(function(){Fluid.plugins.fancyBox()}))</script><script>Fluid.plugins.imageCaption()</script><script src="/js/boot.js"></script><noscript><div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div></noscript></body></html>
