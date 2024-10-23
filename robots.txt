@@ -11,5 +11,4 @@ Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
 
-Sitemap: http://honven.xyz/sitemap.xml
-Sitemap: http://honven.xyz/baidusitemap.xml
+Sitemap: https://jichangtuijian.com/sitemap.xml
